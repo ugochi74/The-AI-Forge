@@ -38,7 +38,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
-| 2026-10-31 | 0/01 | 3/3 | Correctly explained the environment stack; Git, Python, and Node are available here, while uv and the course verifier are unavailable in this workspace. |
+| 2026-10-31 | 0/01 | 3/3 | Passed the Dev Environment quiz; installed Rust/Cargo and Julia, ran the Python, TypeScript, Rust, and Julia examples, and recorded their outputs. Cloning the course repo, creating its virtual environment, installing its packages, and running its preflight remain pending. |
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
