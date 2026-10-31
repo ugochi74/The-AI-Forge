@@ -34,6 +34,23 @@ rely on them.
 You do not need a GPU to start. Install PyTorch or GPU drivers when a later
 lesson needs them. Rust and Julia also wait until a lesson uses them.
 
+## Inspect your current setup
+
+Run the Python script from the root of The-AI-Forge:
+
+```bash
+python3 phases/00-setup-and-tooling/01-dev-environment/code/check_environment.py
+```
+
+It reports the operating system and Python version. Record the output in
+`outputs/environment-check.txt`. Record individual versions in
+`verification/tool-versions.txt`. Extend the script as you learn to check
+other tools.
+
+Run each available example in `code/` with its language runtime. Save actual
+terminal output in [outputs/environment-check.txt](outputs/environment-check.txt).
+Mark a program as not run when its runtime is unavailable.
+
 ## Set up the course environment
 
 Run these commands from the cloned course repository root. That folder must
@@ -91,6 +108,10 @@ Then reload the file and check `uv`:
 source ~/.zshrc
 uv --version
 ```
+
+Rustup and Juliaup also add their executable directories to your shell path.
+Open a new terminal after installation, or reload `~/.zshrc`, then run
+`rustc --version`, `cargo --version`, and `julia --version`.
 
 ## Troubleshooting
 
