@@ -1,0 +1,40 @@
+# GPU Setup & Cloud outputs
+
+## Local `code/gpu_check.py`
+
+```text
+=== GPU Check ===
+
+PyTorch version: 2.15.0+cpu
+CUDA available: False
+MPS (Apple Silicon) available: False
+
+No GPU detected. That's fine for most lessons.
+For GPU-heavy lessons, use Google Colab (free).
+```
+
+Local `nvidia-smi` result:
+
+```text
+zsh: command not found: nvidia-smi
+```
+
+## Google Colab GPU check
+
+```text
+PyTorch: 2.11.0+cu130
+CUDA available: True
+GPU: Tesla T4
+```
+
+`nvidia-smi` reported driver 580.82.07, CUDA 13.0, Tesla T4, and 15,360 MiB.
+
+## CPU vs GPU benchmark (second run)
+
+```text
+CPU: 2.797s
+GPU: 0.088s
+Speedup: 32x
+```
+
+The first run measured CPU 2.005s, GPU 0.135s, and speedup 15x.
