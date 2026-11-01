@@ -1,0 +1,8 @@
+Captured from the shared workspace on 2026-10-31
+
+Git: git version 2.43.0
+Git author name: configured
+Git author email: configured
+
+Course checkout currently uses the course maintainers' repository as `origin`.
+Do not push to that remote; push only to a fork you own.
