@@ -1,0 +1,50 @@
+# Git & Collaboration Practice
+
+## Branch
+
+Command: `git checkout -b my-progress`
+
+```text
+Switched to a new branch 'my-progress'
+```
+
+## First local commit
+
+Commit: `f609fcf` — `Add Git practice file`
+
+```text
+1 file changed, 1 insertion(+)
+```
+
+## Checkpoint ignore rules
+
+Command: `git check-ignore -v sample.pt sample.pth sample.safetensors`
+
+```text
+.gitignore:2:*.pt       sample.pt
+.gitignore:3:*.pth      sample.pth
+.gitignore:4:*.safetensors      sample.safetensors
+```
+
+Second local commit: `cdbf198` — `Ignore model checkpoint files`.
+
+## History inspection
+
+Commands: `git log --oneline` and `git show --stat f609fcf`
+
+The first showed the `my-progress` branch at `f609fcf`, with `main` unchanged
+at `062bc49`. `git show --stat` reported one new file and one inserted line.
+
+## Course fork push
+
+Fork URL: `https://github.com/ugochi74/ai-engineering-from-scratch`
+Branch: `my-progress`
+Commit: `da22ef4` — `Add Git collaboration practice file`
+
+Command: `git push -u origin my-progress`
+
+```text
+To https://github.com/ugochi74/ai-engineering-from-scratch.git
+ * [new branch]      my-progress -> my-progress
+branch 'my-progress' set up to track 'origin/my-progress'.
+```
