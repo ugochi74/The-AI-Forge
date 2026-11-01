@@ -1,0 +1,15 @@
+Captured from the learner's local environment and Google Colab on 2026-11-01
+
+Local environment:
+PyTorch: 2.15.0+cpu
+CUDA available: False
+MPS available: False
+nvidia-smi: command not found
+
+Google Colab runtime:
+GPU: Tesla T4
+NVIDIA driver: 580.82.07
+CUDA reported by nvidia-smi: 13.0
+GPU memory: 15,360 MiB
+PyTorch: 2.11.0+cu130
+torch.cuda.is_available(): True
