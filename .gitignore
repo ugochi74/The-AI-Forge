@@ -1,0 +1,4 @@
+# Large model checkpoints should not be committed to Git.
+*.pt
+*.pth
+*.safetensors
