@@ -1,0 +1,93 @@
+# Practice program outputs
+
+## `code/check_environment.py`
+
+Command: `python3 phases/00-setup-and-tooling/01-dev-environment/code/check_environment.py`
+
+```text
+Operating System: Linux
+Python Version: 3.12.3 (main, Jan 22 2026, 20:57:42) [GCC 13.3.0]
+```
+
+## `code/hello_world.py`
+
+Command: `python3 phases/00-setup-and-tooling/01-dev-environment/code/hello_world.py`
+
+```text
+Hello, World!
+Welcome to AI Engineering.
+```
+
+## `code/hello_world.ts`
+
+Command: `node phases/00-setup-and-tooling/01-dev-environment/code/hello_world.ts`
+
+```text
+Hello, World!
+Welcome to AI Engineering.
+```
+
+## `code/hello_world.rs`
+
+Compile command: `rustc phases/00-setup-and-tooling/01-dev-environment/code/hello_world.rs -o /tmp/phase00-hello-rust`
+Run command: `/tmp/phase00-hello-rust`
+
+Actual output:
+
+```text
+Hello, World!
+Welcome to AI Engineering.
+```
+
+## `code/hello_world.jl`
+
+Commands, after reloading zsh configuration:
+
+```zsh
+source ~/.zshrc
+julia phases/00-setup-and-tooling/01-dev-environment/code/hello_world.jl
+```
+
+Actual output:
+
+```text
+Hello, World!
+Welcome to AI Engineering.
+```
+
+## Julia PATH check
+
+Command: `julia --version`
+
+```text
+zsh: command not found: julia
+```
+
+The current shell has not loaded Juliaup's PATH update. The installed binary
+works by its full path:
+
+Command: `"$HOME/.juliaup/bin/julia" --version`
+
+```text
+julia version 1.13.3
+```
+
+## Rust PATH check
+
+Before Rustup's environment file was loaded, `rustc --version` returned:
+
+```text
+zsh: command not found: rustc
+```
+
+After loading Rustup's environment file, the version checks returned:
+
+Command: `source "$HOME/.cargo/env"`
+
+```text
+rustc 1.99.1 (58cf8f9c3 2026-10-13)
+cargo 1.99.1 (5f94df478 2026-08-27)
+```
+
+The zsh configuration now loads `~/.cargo/env` in new sessions. Reload
+`~/.zshrc` in the current terminal before using `rustc` or `cargo` there.

@@ -8,6 +8,14 @@ Prepare a Python environment for the course. Keep its packages separate from
 other projects. Check that the required tools work before you begin later
 lessons.
 
+## Setup Status
+
+Completed in `course-repo/`: created `.venv` with Python 3.12.3; installed
+NumPy, Matplotlib, Jupyter, and CPU-only PyTorch; confirmed Node.js and pnpm;
+and passed the official beginner preflight (Python and Git, 2/2). See
+[`verification/environment-check.md`](verification/environment-check.md) for
+the recorded results.
+
 ## The four layers
 
 | Layer | Examples | Purpose |
@@ -31,8 +39,9 @@ This workspace previously reported Python 3.12.3, Git 2.43.0, and Node.js
 the current `PATH`. Check the versions again in your own terminal before you
 rely on them.
 
-You do not need a GPU to start. Install PyTorch or GPU drivers when a later
-lesson needs them. Rust and Julia also wait until a lesson uses them.
+You do not need a GPU to start. This machine has the CPU-only PyTorch build in
+`course-repo/.venv`; CUDA is unavailable. Rust and Julia are installed, though
+their GPU or performance features are not needed for the beginner route.
 
 ## Inspect your current setup
 
