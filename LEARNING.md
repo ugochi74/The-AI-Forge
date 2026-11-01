@@ -38,7 +38,8 @@ To become a competent AI Engineer and build a personal AI chatbot.
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
-| 2026-10-31 | 0/01 | 3/3 | Passed the Dev Environment quiz; installed Rust/Cargo and Julia, ran the Python, TypeScript, Rust, and Julia examples, and recorded their outputs. Cloning the course repo, creating its virtual environment, installing its packages, and running its preflight remain pending. |
+| 2026-10-31 | 0/01 | 3/3 | Passed the Dev Environment quiz; ran and recorded all four language examples; set up `course-repo/.venv` with NumPy, Matplotlib, Jupyter, and CPU PyTorch; verified Node/pnpm, Rust/Cargo, Julia, and the Python packages; beginner preflight passed 2/2. |
+| 2026-11-01 | 0/02 | 3/3 | Practiced staging and committing selected files, branches, `.gitignore`, and history inspection. Forked the course repository and pushed `my-progress` (`da22ef4`) to the personal fork. |
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
