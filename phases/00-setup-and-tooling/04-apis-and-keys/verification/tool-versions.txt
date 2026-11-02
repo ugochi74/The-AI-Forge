@@ -1,0 +1,7 @@
+Captured from the shared workspace on 2026-11-02
+
+Python: Python 3.12.3
+Anthropic Python SDK: 2.3.0 (installed in course-repo/.venv; import verified)
+LLM_MODEL: claude-sonnet-5 (attempted; access not verified because the account
+credit balance was too low)
+API key: not stored in this file
