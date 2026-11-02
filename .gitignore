@@ -5,3 +5,6 @@
 
 # Local API secrets
 .env
+
+# Installed JavaScript dependencies
+node_modules/
