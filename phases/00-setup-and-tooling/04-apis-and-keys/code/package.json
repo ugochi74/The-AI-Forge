@@ -1,0 +1,12 @@
+{
+  "name": "apis-and-keys-typescript-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}
