@@ -1,0 +1,20 @@
+APIs & Keys practical evidence
+Captured: 2026-11-02
+
+Safe configuration
+- .env ignore rule: verified with git check-ignore -v .env
+- API key available to the process: yes; value not printed or recorded
+
+SDK setup
+- Anthropic Python SDK: 2.3.0, installed in course-repo/.venv
+- Import check: passed
+
+API requests
+- Model attempted: claude-sonnet-5
+- SDK request: HTTP 400, invalid_request_error; Anthropic reported that the
+  account credit balance was too low. No successful response was produced.
+- Raw HTTP request: not reached; the example script stopped on the SDK error.
+- Fake-key request: HTTP 401, authentication_error.
+
+Successful SDK and raw HTTP calls, including a response comparison, remain
+pending until API access is available. No API key is stored in this file.
