@@ -1,0 +1,7 @@
+Project virtual environment: `.venv`
+Python: 3.12.3
+JupyterLab: 4.6.5
+ipykernel: 7.4.0
+NumPy: 2.5.4
+pandas: 3.1.0
+Matplotlib: 3.11.2
