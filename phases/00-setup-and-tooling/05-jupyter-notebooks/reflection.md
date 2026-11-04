@@ -5,7 +5,10 @@
 A notebook is useful for trying code in pieces and seeing tables or plots
 beside it. Its kernel keeps variables between cells, so running cells out of
 order can hide dependencies. A reusable chatbot function or production task
-belongs in a `.py` script.
+belongs in a `.py` script.A Jupyter notebook (.ipynb) is an interactive environment where you can write and execute code in cells, see outputs inline, and mix code with formatted text explanations. It runs the code in cells and keeps variables in memory between executions
+
+
+
 
 ## What was confusing
 
