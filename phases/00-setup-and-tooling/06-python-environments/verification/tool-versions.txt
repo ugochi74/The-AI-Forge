@@ -1,0 +1,17 @@
+AI Engineering from Scratch
+Phase 00 - Lesson 06: Python Environments
+
+Python: 3.12.3
+pip: 26.3
+uv: Not available
+NumPy: 2.5.4
+Matplotlib: 3.11.2
+Jupyter: 1.1.1
+Jupyter Core: 5.9.1
+Scikit-learn: 1.9.1
+Pandas: 3.1.0
+PyTorch: Not installed
+
+Environment: .venv
+Setup method: Python venv + pip
+Setup verification: PASSED
