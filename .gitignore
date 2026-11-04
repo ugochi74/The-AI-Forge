@@ -8,3 +8,6 @@
 
 # Installed JavaScript dependencies
 node_modules/
+
+# Local Python virtual environments
+.venv/
