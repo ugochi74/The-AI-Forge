@@ -19,6 +19,14 @@ This reflection summarizes the learning discussion and verified work so far.
   `CMD` specifies the default startup command, such as starting a chatbot.
 - CUDA software cannot create GPU hardware; GPU acceleration needs a compatible
   NVIDIA GPU, driver, and container access.
+- Correctly predicted that copied code keeps printing `Hello` after a host edit,
+  while bind-mounted code prints the updated `Welcome` on the next run.
+- Understood that bind-mounted files remain on the host and a replacement
+  container can reuse data in the same named volume.
+- Described the container port as an internal door and the host port as the
+  outside entrance after working through forwarding examples.
+- Identified logs as the place to inspect application errors and understood
+  that `down -v` removes the stack's saved volumes, with scope clarified.
 
 ## What needed more explanation
 
@@ -28,6 +36,12 @@ examples using `python --version` helped separate building from running.
 
 Copied files versus bind-mounted files, persistence, and Compose still need
 hands-on practice before claiming confidence with them.
+
+Service names, host ports, and container ports needed several examples. A host
+mapping to port 9000 does not change Flask's internal port 5000. HTTP versus
+HTTPS also needed repeated correction: this example uses `http://api:5000`,
+because the Flask server has no TLS configuration. These distinctions need
+another recall check later.
 
 ## Practical work and limits
 
@@ -44,5 +58,7 @@ been verified yet.
 
 Run the exercise guide on an approved Docker-enabled host, inspect actual
 outputs, practise changing code through a bind mount, and take the lesson quiz.
+Continue with the CUDA `devel` versus `runtime` base-image comparison, then
+revisit service addresses and protocol selection.
 For the personal chatbot, the goal is to package its software environment and
 keep model/data files available across container replacement.
