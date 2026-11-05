@@ -1,0 +1,6 @@
+Main environment:
+/home/recoding/The-AI-Forge/.venv/bin/python
+2.5.4
+Second environment:
+/home/recoding/The-AI-Forge/phases/00-setup-and-tooling/06-python-environments/code/isolation-demo/.venv/bin/python
+1.26.4
