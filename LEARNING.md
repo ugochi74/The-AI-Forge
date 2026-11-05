@@ -45,10 +45,12 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-03 | 0/05 | 3/3 | Explained that notebooks are for trying ideas and inspecting results, while reusable chatbot code belongs in `.py` scripts; ran a small average calculation in a notebook cell. |
 | 2026-11-04 | 0/06 | 3/3 | Set up and verified the Python environment using `.venv` and pip; installed and checked NumPy, Matplotlib, Jupyter, scikit-learn, and pandas; ran the setup script and passed all required checks. |
 
+| 2026-11-05 | 0/07 | 3/3 | Complete: theory quiz 3/3 (D, C, B); local syntax/path checks passed. Runtime exercises not run because Docker daemon access is denied and Compose is missing; GPU test not run on CPU-only hardware. |
+
 ## Current session
 
 - Date: 2026-11-05
-- Lesson: 0/07 — Docker for AI (**in progress**, not yet completed).
+- Lesson: 0/07 — Docker for AI (**complete**).
 - Recall: answered both Python environment warm-up questions correctly
   (interpreter path and pip/conda dependency tracking); these were unscored.
 - Covered: why a package list alone misses the runtime environment; Docker
@@ -84,14 +86,29 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Checkpoint: HTTP versus HTTPS needed repeated clarification; eventually
   selected `http://` for the Flask example without TLS. Revisit this distinction
   in a later example rather than treating it as mastered.
-- Resume here: introduce Compose startup, status, logs, and shutdown commands,
-  including named-volume retention. Practical execution still requires an
-  approved Docker-enabled host and the lesson runbook.
+- Checkpoint: reviewed Compose status/logs and shutdown; understood `down -v`
+  removes the project's declared named and attached anonymous volumes, with
+  external volumes and bind-mounted host folders excluded.
+- Checkpoint: chose the CUDA runtime base for running prebuilt packages.
+  Initially confused the image tag with base selection; correctly identified
+  `--build-arg CUDA_VARIANT=runtime` as choosing the variant after clarification.
+  Correctly predicted reuse of a cached Flask installation when only a later
+  copied application file changes.
+- Checkpoint: described Compose as a conductor and correctly recalled
+  `http://api:5000` for the Flask service after the port/protocol review.
+- Quiz: passed all three post-lesson questions, 3/3 (D, C, B): persistent
+  storage, NVIDIA Container Toolkit, and service-name networking.
+- System limitations: image builds, container network/HTTP checks, persistence,
+  and image-size comparison were not run because Docker daemon access is denied
+  and Docker Compose is missing. GPU execution was not run on the CPU-only host.
+- Available checks rerun: Python/YAML/shell syntax and bind source paths passed;
+  actual results saved in the lesson outputs/local-checks.txt.
+- Resume here: advance to the next unlogged Phase 0 lesson. The Lesson 7 runbook
+  remains available for optional future runtime practice.
 - Reflection: recorded the session's concepts, corrected misconceptions, and
   practical limits in `phases/00-setup-and-tooling/07-docker-for-ai/reflection.md`.
-- Remaining: execute and verify the practical exercises, continue teaching,
-  and take the lesson quiz. Lesson 0/07 remains
-  in progress; prepared artifacts are not completion evidence.
+- Lesson 0/07 is complete for the learning plan.
+  No successful container execution or image-size measurement is claimed.
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
