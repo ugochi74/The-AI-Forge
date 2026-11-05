@@ -69,3 +69,26 @@ The missing Jupyter and scikit-learn packages were installed successfully.
 ## Key Takeaway
 
 Virtual environments make Python projects easier to manage by isolating dependencies and reducing package conflicts.
+
+## Isolation exercise
+
+Compared NumPy 2.5.4 in the main `.venv` with NumPy 1.26.4 in
+`code/isolation-demo/.venv`. Both versions coexist because each interpreter
+uses its own environment packages. Evidence: `outputs/environment-isolation.txt`.
+
+## Dependency lockfile
+
+The resolver successfully generated `code/dependency-demo/requirements.lock`.
+A CPU-only torch constraint keeps the tested build; the lock also pins
+transitive dependencies, including setuptools required by torch. The quiet
+resolver appeared idle while retrieving metadata; verbose output showed progress.
+Installing the lockfile into a fresh Python 3.12 environment reproduced the
+NumPy, CPU PyTorch, and Anthropic imports; `pip check` found no broken
+requirements. Evidence: `outputs/lockfile-reproduction.txt`.
+
+## System Python install exercise
+
+The outside-environment install was attempted and blocked by Ubuntu's PEP 668
+`externally-managed-environment` protection. No system packages were changed;
+the captured reason is in `outputs/system-install-check.txt`. Use a virtual
+environment for third-party packages on this machine.
