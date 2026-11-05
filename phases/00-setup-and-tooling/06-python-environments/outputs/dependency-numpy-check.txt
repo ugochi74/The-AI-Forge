@@ -1,0 +1,4 @@
+NumPy: 2.5.4
+PyTorch: 2.15.0+cpu
+Anthropic: 2.5.0
+Tensor as NumPy: [2 4 6]
