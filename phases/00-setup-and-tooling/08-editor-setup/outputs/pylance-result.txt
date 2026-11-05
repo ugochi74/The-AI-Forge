@@ -1,0 +1,4 @@
+Source: learner observations in VS Code
+Passed: warning for integer argument in greet(42), which expects str.
+Passed: hovering over greet displays its typed function signature.
+This records editor observations, not a Python runtime test.
