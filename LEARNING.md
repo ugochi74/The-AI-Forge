@@ -44,10 +44,10 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-02 | 0/04 | 3/3 | Reviewed safe API key storage, Anthropic's `x-api-key` header, and HTTP 429 rate limits; clarified that raw HTTP exposes request details and status/error responses hidden by SDK abstractions. |
 | 2026-11-03 | 0/05 | 3/3 | Explained that notebooks are for trying ideas and inspecting results, while reusable chatbot code belongs in `.py` scripts; ran a small average calculation in a notebook cell. |
 | 2026-11-04 | 0/06 | 3/3 | Set up and verified the Python environment using `.venv` and pip; installed and checked NumPy, Matplotlib, Jupyter, scikit-learn, and pandas; ran the setup script and passed all required checks. |
-
 | 2026-11-05 | 0/07 | 3/3 | Complete: theory quiz 3/3 (D, C, B); local syntax/path checks passed. Runtime exercises not run because Docker daemon access is denied and Compose is missing; GPU test not run on CPU-only hardware. |
+| 2026-11-05 | 0/08 | 3/3 | Configured VS Code; verified Black on save, Pylance warning/signature, script output Hello, Andrew, and notebook result 12 using project .venv/ipykernel. All eight extensions confirmed. Remote connection not run: no remote host identified. |
 
-## Current session
+## Lesson 07 session record
 
 - Date: 2026-11-05
 - Lesson: 0/07 — Docker for AI (**complete**).
@@ -109,6 +109,17 @@ To become a competent AI Engineer and build a personal AI chatbot.
   practical limits in `phases/00-setup-and-tooling/07-docker-for-ai/reflection.md`.
 - Lesson 0/07 is complete for the learning plan.
   No successful container execution or image-size measurement is claimed.
+
+## Current session
+
+- Lesson: 0/08 — Editor Setup (**complete**).
+- Quiz: 3/3; answers D, D, D.
+- Verified: eight recommended extensions, Black on save, Pylance diagnostics
+  and hover signatures, script execution, and notebook execution.
+- Troubleshooting: Black waited for environment discovery; configured its
+  python3 interpreter. Created .venv and installed ipykernel for notebooks.
+- Optional Remote SSH connection not run: no remote host identified.
+- Next lesson: 0/09 — Data Management.
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
