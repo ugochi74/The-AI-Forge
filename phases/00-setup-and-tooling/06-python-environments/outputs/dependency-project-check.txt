@@ -1,0 +1,5 @@
+Interpreter: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/06-python-environments/code/dependency-demo/.venv/bin/python
+PyTorch: 2.15.0+cpu
+Anthropic: 2.5.0
+CUDA available: False
+Tensor calculation: [2, 4, 6]
