@@ -10,8 +10,8 @@ becoming a competent AI engineer and building a personal AI chatbot.
 
 ## Progress
 
-Currently studying **Phase 00: Setup & Tooling**. Lessons 01–06 are complete,
-each with a **3/3 lesson quiz**.
+Currently studying **Phase 00: Setup & Tooling**. Lessons 01–07 are complete. Each has a
+**3/3 lesson quiz**.
 
 | Lesson | Status | Work recorded |
 |--------|--------|---------------|
@@ -21,7 +21,7 @@ each with a **3/3 lesson quiz**.
 | [04 · APIs & Keys](phases/00-setup-and-tooling/04-apis-and-keys/) | Complete | Reviewed API key storage, authentication headers, and rate-limit responses. |
 | [05 · Jupyter Notebooks](phases/00-setup-and-tooling/05-jupyter-notebooks/) | Complete | Practiced notebook calculations and when to move reusable code into Python scripts. |
 | [06 · Python Environments](phases/00-setup-and-tooling/06-python-environments/) | Complete | Created and verified a virtual environment with NumPy, Matplotlib, Jupyter, scikit-learn, and pandas. |
-| [07 · Docker for AI](phases/00-setup-and-tooling/07-docker-for-ai/) | In progress | Prepared Docker/Compose, Flask API, persistence checks, and image comparison commands; build attempted but blocked by Docker daemon access; Compose missing and quiz pending. |
+| [07 · Docker for AI](phases/00-setup-and-tooling/07-docker-for-ai/) | Complete | Quiz 3/3; local syntax/path checks passed. Runtime exercises not run: Docker daemon access denied and Compose missing. GPU test not run: CPU-only host. |
 
 ## Repository layout
 
@@ -44,13 +44,15 @@ separate Python installation, `WORKDIR`, `CMD`, and copying code with `COPY`.
 Correctly predicted the difference between copied and bind-mounted code, and
 that files saved through a bind mount survive container removal. Reviewed named
 volume reuse, service-name networking, host/container ports, and HTTP versus
-HTTPS; port routing and protocol selection need more practice. Next: Compose
-startup, inspection, and shutdown commands.
+HTTPS; correctly recalled `http://api:5000` on a later check. Also reviewed
+Compose lifecycle commands, CUDA base variants versus image tags, and build
+caching. Correctly predicted reuse of an unchanged package installation step.
 The [Lesson 7 exercise runbook](phases/00-setup-and-tooling/07-docker-for-ai/README.md)
 now covers all four practical exercises, with an optional GPU configuration.
 Python and YAML syntax checks passed; the actual build was blocked by Docker
-daemon permissions, and Docker Compose is missing. Container exercises, image
-size measurements, and the lesson quiz remain pending. The exact resume point is saved
+daemon permissions, and Docker Compose is missing. Container exercises and image-size
+measurements were not run because Docker daemon access is denied and Compose
+is missing. The theory quiz is passed: **3/3**. The exact resume point is saved
 in [the study plan](LEARNING.md#current-session).
 
 The [Lesson 7 outputs](phases/00-setup-and-tooling/07-docker-for-ai/outputs/README.md)
@@ -59,4 +61,4 @@ and exercise results automatically.
 
 The [Docker session reflection](phases/00-setup-and-tooling/07-docker-for-ai/reflection.md)
 records the concepts reviewed, misconceptions clarified, and hands-on work still
-needed. Lesson 7 remains in progress until runtime checks and the quiz are complete.
+needed for optional future practice. Lesson 7 is complete; the theory quiz is passed.
