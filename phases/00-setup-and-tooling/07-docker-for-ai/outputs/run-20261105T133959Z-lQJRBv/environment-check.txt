@@ -1,0 +1,11 @@
+Command: docker version 
+
+Client:
+ Version:           28.2.2
+ API version:       1.50
+ Go version:        go1.23.1
+ Git commit:        28.2.2-0ubuntu1~24.04.1
+ Built:             Wed Sep 10 14:16:39 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.50/version": dial unix /var/run/docker.sock: connect: operation not permitted
