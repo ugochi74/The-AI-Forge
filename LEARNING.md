@@ -75,8 +75,10 @@ To become a competent AI Engineer and build a personal AI chatbot.
   capture full exercise results when Docker access and Compose are available.
 - Resume here: run `phases/00-setup-and-tooling/07-docker-for-ai/README.md`
   on an approved Docker-enabled host, then review copied files versus bind mounts.
+- Reflection: recorded the session's concepts, corrected misconceptions, and
+  practical limits in `phases/00-setup-and-tooling/07-docker-for-ai/reflection.md`.
 - Remaining: execute and verify the practical exercises, continue teaching,
-  write the learner's reflection, and take the lesson quiz. Lesson 0/07 remains
+  and take the lesson quiz. Lesson 0/07 remains
   in progress; prepared artifacts are not completion evidence.
 
 ## Review queue
