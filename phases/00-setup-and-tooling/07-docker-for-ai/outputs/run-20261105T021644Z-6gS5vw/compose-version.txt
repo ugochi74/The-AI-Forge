@@ -1,0 +1,5 @@
+Command: docker compose version 
+
+docker: unknown command: docker compose
+
+Run 'docker --help' for more information
