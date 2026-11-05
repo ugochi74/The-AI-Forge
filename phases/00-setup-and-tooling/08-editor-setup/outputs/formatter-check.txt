@@ -1,0 +1,18 @@
+Bundled Black command-line check (not editor format-on-save):
+--- phases/00-setup-and-tooling/08-editor-setup/code/vscode/editor_demo.py	2026-11-05 15:01:38.086647+00:00
++++ phases/00-setup-and-tooling/08-editor-setup/code/vscode/editor_demo.py	2026-11-05 15:03:27.999550+00:00
+@@ -1,5 +1,5 @@
++def greet(name: str) -> str:
++    return "Hello, " + name
+ 
+-def greet( name:str )->str:
+-    return "Hello, "+name
+ 
+-print( greet("Andrew") )
++print(greet("Andrew"))
+would reformat phases/00-setup-and-tooling/08-editor-setup/code/vscode/editor_demo.py
+
+Oh no! 💥 💔 💥
+1 file would be reformatted.
+
+Exit code: 1
