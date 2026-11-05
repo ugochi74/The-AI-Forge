@@ -1,0 +1,7 @@
+Command: docker compose -f phases/00-setup-and-tooling/07-docker-for-ai/code/docker-compose.yml -f phases/00-setup-and-tooling/07-docker-for-ai/code/compose.gpu.yml up -d
+
+unknown shorthand flag: 'f' in -f
+
+Usage:  docker [OPTIONS] COMMAND [ARG...]
+
+Run 'docker --help' for more information
