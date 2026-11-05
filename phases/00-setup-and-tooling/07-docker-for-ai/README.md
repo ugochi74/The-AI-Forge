@@ -1,8 +1,9 @@
 # Lesson 07: Docker for AI
 
 Implementation and exercises for the upstream [Docker for AI lesson](https://aiengineeringfromscratch.com/lesson?path=00-setup-and-tooling/07-docker-for-ai).
-**Status: prepared; container exercises remain blocked by daemon access and
-missing Docker Compose. The lesson and its quiz are not complete.**
+**Status: complete. Quiz: 3/3. Local checks passed.**
+Runtime exercises were not run because Docker daemon access is denied and
+Docker Compose is missing; GPU execution was not run on the CPU-only host.
 
 ## Prerequisites
 
@@ -145,7 +146,9 @@ docker compose down
 ```
 
 Review logs for Jupyter tokens before committing them. Record actual results in
-`verification/environment-check.md`, write your reflection, and take the lesson
-quiz with `learn`. Only then record lesson completion in `LEARNING.md` and the
-root README. No image builds, runtime results, or quiz scores are inferred from
+`verification/environment-check.md` and update the reflection with runtime
+results if you revisit the practical exercises. The theory quiz is passed
+(3/3), and the lesson is complete. Record any future runtime results separately
+from exercises not run due to Docker daemon access and missing Compose in
+`LEARNING.md` and the root README. No image builds, runtime results, or quiz scores are inferred from
 the existence of these files.
