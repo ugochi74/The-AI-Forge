@@ -1,0 +1,9 @@
+Source: learner-provided terminal output
+
+Command: ssh -V
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.11, OpenSSL 3.0.13 30 Jan 2024
+
+Saved SSH configuration check:
+No saved SSH configuration
+
+SSH client is installed. No remote host has been identified for this lesson; no connection was attempted.
