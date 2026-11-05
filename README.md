@@ -10,7 +10,7 @@ becoming a competent AI engineer and building a personal AI chatbot.
 
 ## Progress
 
-Currently studying **Phase 00: Setup & Tooling**. Lessons 01–07 are complete. Each has a
+Currently studying **Phase 00: Setup & Tooling**. Lessons 01–08 are complete. Each has a
 **3/3 lesson quiz**.
 
 | Lesson | Status | Work recorded |
@@ -22,6 +22,7 @@ Currently studying **Phase 00: Setup & Tooling**. Lessons 01–07 are complete. 
 | [05 · Jupyter Notebooks](phases/00-setup-and-tooling/05-jupyter-notebooks/) | Complete | Practiced notebook calculations and when to move reusable code into Python scripts. |
 | [06 · Python Environments](phases/00-setup-and-tooling/06-python-environments/) | Complete | Created and verified a virtual environment with NumPy, Matplotlib, Jupyter, scikit-learn, and pandas. |
 | [07 · Docker for AI](phases/00-setup-and-tooling/07-docker-for-ai/) | Complete | Quiz 3/3; local syntax/path checks passed. Runtime exercises not run: Docker daemon access denied and Compose missing. GPU test not run: CPU-only host. |
+| [08 · Editor Setup](phases/00-setup-and-tooling/08-editor-setup/) | Complete | Quiz 3/3; eight extensions installed, formatting/type checks, script execution, and notebook execution verified. Remote connection not run: no host identified. |
 
 ## Repository layout
 
@@ -62,3 +63,10 @@ and exercise results automatically.
 The [Docker session reflection](phases/00-setup-and-tooling/07-docker-for-ai/reflection.md)
 records the concepts reviewed, misconceptions clarified, and hands-on work still
 needed for optional future practice. Lesson 7 is complete; the theory quiz is passed.
+
+## Latest lesson
+
+Completed [Editor Setup](phases/00-setup-and-tooling/08-editor-setup/README.md)
+with a **3/3** quiz. Verified formatting on save, type warnings and hover
+signatures, Python script execution, and Jupyter execution with the project
+`.venv`. Next: **Data Management**.
