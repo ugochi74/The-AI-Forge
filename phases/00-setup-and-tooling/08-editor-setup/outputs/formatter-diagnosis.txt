@@ -1,0 +1,11 @@
+Observed from VS Code Black Formatter logs:
+Waiting for interpreter from ms-python.python-environments extension.
+Formatting requested before server has started.
+
+Filesystem checks:
+Configured .venv/bin/python does not exist in this workspace.
+Demo exists at code/vscode/editor_demo.py with uneven spacing.
+
+Action:
+Set black-formatter.interpreter to ["python3"] and importStrategy to useBundled.
+Editor restart/reload and actual format-on-save verification remain pending.
