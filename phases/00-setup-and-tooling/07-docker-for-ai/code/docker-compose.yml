@@ -1,0 +1,43 @@
+services:
+  ai-dev:
+    image: ai-forge-lesson07:devel
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ../../../../:/workspace
+      - ../outputs/models:/models
+      - ../outputs/datasets:/data
+
+    ports:
+      - "127.0.0.1:8888:8888"
+
+    stdin_open: true
+    tty: true
+
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+  api:
+    image: ai-forge-lesson07:devel
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app.py:/app/app.py:ro
+    ports:
+      - "127.0.0.1:5000:5000"
+    command: python /app/app.py
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.5
+
+    ports:
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
+
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  qdrant_data:
