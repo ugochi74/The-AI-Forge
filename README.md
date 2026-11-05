@@ -41,6 +41,11 @@ hardware.
 Confirmed that containers can reuse an existing image and that Dockerfile
 `RUN` instructions install packages at build time. Reviewed the container's
 separate Python installation, `WORKDIR`, `CMD`, and copying code with `COPY`.
+Correctly predicted the difference between copied and bind-mounted code, and
+that files saved through a bind mount survive container removal. Reviewed named
+volume reuse, service-name networking, host/container ports, and HTTP versus
+HTTPS; port routing and protocol selection need more practice. Next: Compose
+startup, inspection, and shutdown commands.
 The [Lesson 7 exercise runbook](phases/00-setup-and-tooling/07-docker-for-ai/README.md)
 now covers all four practical exercises, with an optional GPU configuration.
 Python and YAML syntax checks passed; the actual build was blocked by Docker
