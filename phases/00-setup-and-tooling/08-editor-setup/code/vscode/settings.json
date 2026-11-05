@@ -1,0 +1,17 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+            88,
+            120
+        ]
+    },
+    "notebook.output.scrolling": true,
+    "terminal.integrated.scrollback": 10000,
+    "black-formatter.interpreter": [
+        "python3"
+    ],
+    "black-formatter.importStrategy": "useBundled"
+}
