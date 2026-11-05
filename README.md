@@ -51,3 +51,7 @@ in [the study plan](LEARNING.md#current-session).
 The [Lesson 7 outputs](phases/00-setup-and-tooling/07-docker-for-ai/outputs/README.md)
 include captured prerequisite errors and a script for recording future build
 and exercise results automatically.
+
+The [Docker session reflection](phases/00-setup-and-tooling/07-docker-for-ai/reflection.md)
+records the concepts reviewed, misconceptions clarified, and hands-on work still
+needed. Lesson 7 remains in progress until runtime checks and the quiz are complete.
