@@ -1,0 +1,6 @@
+Lesson 08 post-lesson quiz
+Source: learner responses during interactive lesson
+1. Remote editing extension: D — correct
+2. Notebook output scrolling: D — correct
+3. Basic type checking: D — correct
+Score: 3/3
