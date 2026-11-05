@@ -73,8 +73,20 @@ To become a competent AI Engineer and build a personal AI chatbot.
   actual Docker/Compose errors and exit codes are saved under
   `outputs/run-20261105T021644Z-6gS5vw/`. Shell syntax passed. The script can
   capture full exercise results when Docker access and Compose are available.
-- Resume here: run `phases/00-setup-and-tooling/07-docker-for-ai/README.md`
-  on an approved Docker-enabled host, then review copied files versus bind mounts.
+- Checkpoint: correctly predicted that an image's copied script still prints
+  `Hello` after a host edit without rebuilding, while a bind-mounted script
+  prints `Welcome` on the next run. Correctly explained that files saved through
+  the `/models` bind mount remain in the host folder after container removal.
+- Checkpoint: understood that a replacement Qdrant container can reuse a named
+  volume. Correctly selected the Flask service name `api` for communication
+  from `ai-dev`. Needed clarification that published host ports do not change
+  container ports; then described these as outside versus internal entrances.
+- Checkpoint: HTTP versus HTTPS needed repeated clarification; eventually
+  selected `http://` for the Flask example without TLS. Revisit this distinction
+  in a later example rather than treating it as mastered.
+- Resume here: introduce Compose startup, status, logs, and shutdown commands,
+  including named-volume retention. Practical execution still requires an
+  approved Docker-enabled host and the lesson runbook.
 - Reflection: recorded the session's concepts, corrected misconceptions, and
   practical limits in `phases/00-setup-and-tooling/07-docker-for-ai/reflection.md`.
 - Remaining: execute and verify the practical exercises, continue teaching,
