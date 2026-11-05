@@ -1,0 +1,12 @@
+Fresh environment installation from requirements.lock; actual checks
+
+Interpreter: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/06-python-environments/code/dependency-demo/lock-check/.venv/bin/python
+NumPy: 2.5.4
+PyTorch: 2.15.0+cpu
+Anthropic: 2.5.0
+Tensor as NumPy: [2 4 6]
+Exit code: 0
+
+WARNING: The directory '/home/recoding/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+No broken requirements found.
+Exit code: 0
