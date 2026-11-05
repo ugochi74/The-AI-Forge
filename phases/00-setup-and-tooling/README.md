@@ -10,5 +10,8 @@ layout: notes, code, verification, outputs, and reflection.
 - [03 · GPU Setup & Cloud](03-gpu-setup-and-cloud/notes.md)
 - [04 · APIs & Keys](04-apis-and-keys/notes.md)
 - [05 · Jupyter Notebooks](05-jupyter-notebooks/notes.md)
+- [06 · Python Environments](06-python-environments/notes.md)
+- [07 · Docker for AI](07-docker-for-ai/notes.md)
+- [08 · Editor Setup](08-editor-setup/README.md)
 
 Course outline: [Phase 00 lessons](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md#phase-0)
