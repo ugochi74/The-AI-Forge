@@ -1,0 +1,6 @@
+Source: learner-provided CLI output
+Command: code --list-extensions | grep -E "eamodio.gitlens|ms-vscode-remote.remote-ssh"
+
+eamodio.gitlens
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
