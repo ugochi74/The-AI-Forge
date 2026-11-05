@@ -1,0 +1,12 @@
+Lesson 7 local checks — 2026-11-05
+
+PASS: Python syntax: app.py
+PASS: Python syntax: verify_stack.py
+PASS: YAML parsing: docker-compose.yml; services: ai-dev, api, qdrant
+PASS: YAML parsing: compose.gpu.yml; services: ai-dev
+PASS: bash syntax: capture_outputs.sh
+PASS: configured bind-mount source paths exist
+SKIPPED: host Flask execution; Flask is not installed on host, image execution blocked
+
+Runtime Docker exercises skipped by learner choice because daemon access is denied and Compose is unavailable.
+Local syntax and path checks do not verify image builds or runtime behavior.
