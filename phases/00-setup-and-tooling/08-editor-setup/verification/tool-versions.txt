@@ -1,0 +1,9 @@
+Source: learner-provided VS Code terminal output
+
+Command: code --version
+1.100.2
+848b80aeb52026648a8ff9f7c45a9b0a80641e2e
+x64
+
+SSH client (learner-reported):
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.11, OpenSSL 3.0.13 30 Jan 2024
