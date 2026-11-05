@@ -1,0 +1,3 @@
+Source: learner observation after VS Code reload and save
+Result: "it worked the spacing is clean"
+Format-on-save: passed by learner confirmation.
