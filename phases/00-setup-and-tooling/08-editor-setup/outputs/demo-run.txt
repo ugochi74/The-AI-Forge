@@ -1,0 +1,7 @@
+Source: learner-provided VS Code integrated terminal output
+
+Command:
+/bin/python3 /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/08-editor-setup/code/vscode/editor_demo.py
+
+Output:
+Hello, Andrew
