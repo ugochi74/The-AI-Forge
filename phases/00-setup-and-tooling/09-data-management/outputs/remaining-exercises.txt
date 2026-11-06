@@ -1,0 +1,40 @@
+=== MRPC: load, inspect, convert, and split ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Rows: 3668
+Fields: sentence1, sentence2, label, idx
+
+Example 1 (label 1)
+  Sentence 1: Amrozi accused his brother , whom he called " the witness " , of deliberately distorting his evidence .
+  Sentence 2: Referring to him as only " the witness " , Amrozi accused his brother of deliberately distorting his evidence .
+
+Example 2 (label 0)
+  Sentence 1: Yucaipa owned Dominick 's before selling the chain to Safeway in 1998 for $ 2.5 billion .
+  Sentence 2: Yucaipa bought Dominick 's in 1995 for $ 693 million and sold it to Safeway for $ 1.8 billion in 1998 .
+
+Example 3 (label 1)
+  Sentence 1: They had published an advertisement on the Internet on June 10 , offering the cargo for sale , he added .
+  Sentence 2: On June 10 , the ship 's owners had published an advertisement on the Internet , offering the explosives for sale .
+
+Example 4 (label 0)
+  Sentence 1: Around 0335 GMT , Tab shares were up 19 cents , or 4.4 % , at A $ 4.56 , having earlier set a record high of A $ 4.57 .
+  Sentence 2: Tab shares jumped 20 cents , or 4.6 % , to set a record closing high at A $ 4.57 .
+
+Example 5 (label 1)
+  Sentence 1: The stock rose $ 2.11 , or about 11 percent , to close Friday at $ 21.51 on the New York Stock Exchange .
+  Sentence 2: PG & E Corp. shares jumped $ 1.63 or 8 percent to $ 21.03 on the New York Stock Exchange on Friday .
+Dataset cache: /tmp/lesson09-datasets-cache/nyu-mll___glue/mrpc/0.0.0/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue-train.arrow
+
+Format comparison:
+  CSV: 915219 bytes
+  Parquet: 623315 bytes
+  Parquet rows preserved: True
+
+Seeded 70/15/15 split:
+  train: 2567 rows
+  validation: 550 rows
+  test: 551 rows
+  Same assignments with seed 42: True
+
+=== C4 streaming: two 10-second attempts ===
+Attempt 1: first row in 11.9s; then 9178 more examples in 10.6s
+Attempt 2: first row in 3.9s; then 18137 more examples in 10.2s
