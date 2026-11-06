@@ -1,0 +1,14 @@
+# Downloaded datasets and model snapshots are reproducible artifacts.
+data/
+models/
+
+# Python-generated files.
+__pycache__/
+*.py[cod]
+
+# Common model weight formats.
+*.bin
+*.onnx
+*.pt
+*.pth
+*.safetensors
