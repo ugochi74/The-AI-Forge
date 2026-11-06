@@ -1,0 +1,7 @@
+Command:
+.venv/bin/python phases/00-setup-and-tooling/09-data-management/code/data_utils.py
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+1: {'text': 'I rented I AM CURIOUS-YELLOW from my video store because of all the controversy that surrounded it when it was first rel', 'label': '0'}
+2: {'text': '"I Am Curious: Yellow" is a risible and pretentious steaming pile. It doesn\'t matter what one\'s political views are beca', 'label': '0'}
+3: {'text': 'If only to avoid making this type of film in the future. This film is interesting as an experiment but tells no cogent s', 'label': '0'}
