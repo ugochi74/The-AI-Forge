@@ -13,5 +13,6 @@ layout: notes, code, verification, outputs, and reflection.
 - [06 · Python Environments](06-python-environments/notes.md)
 - [07 · Docker for AI](07-docker-for-ai/notes.md)
 - [08 · Editor Setup](08-editor-setup/README.md)
+- [09 · Data Management](09-data-management/README.md)
 
 Course outline: [Phase 00 lessons](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md#phase-0)
