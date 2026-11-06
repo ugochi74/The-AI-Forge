@@ -1,0 +1,6 @@
+Twenty-row split with seed 42:
+
+train: 14 rows
+validation: 3 rows
+test: 3 rows
+Same assignments: True
