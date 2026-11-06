@@ -1,0 +1,15 @@
+Three-row sample format comparison:
+
+reviews.csv: 55 bytes
+reviews.json: 101 bytes
+reviews.parquet: 1321 bytes
+
+CSV contents:
+text,label
+Great film.,1
+Bad film.,0
+Worth watching.,1
+
+The Parquet sample is larger because format metadata has high overhead for
+only three rows. This tiny example does not represent storage efficiency for
+larger datasets.
