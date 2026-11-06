@@ -1,0 +1,5 @@
+Wrote reviews.csv: 24 bytes
+Wrote reviews.json: 51 bytes
+Wrote reviews.parquet: 1252 bytes
+Parquet rows restored: 2
+Unsupported format: Choose .csv, .json, or .parquet
