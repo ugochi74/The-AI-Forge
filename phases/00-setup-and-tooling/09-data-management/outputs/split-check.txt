@@ -1,0 +1,7 @@
+Twenty-row dataset split with seed 42:
+
+train: 14 rows
+validation: 3 rows
+test: 3 rows
+
+These counts approximate a 70/15/15 split for a small dataset.
