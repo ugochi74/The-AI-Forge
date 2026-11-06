@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+=== Dataset preview: stanfordnlp/imdb (train) ===
+
+Example 1
+  Text: I rented I AM CURIOUS-YELLOW from my video store because of all the controversy that surrounded it when it was first released in 1967. I also heard that at first it was seized by U...
+  Label: 0 (negative)
+
+Example 2
+  Text: "I Am Curious: Yellow" is a risible and pretentious steaming pile. It doesn't matter what one's political views are because this film can hardly be taken seriously on any level. As...
+  Label: 0 (negative)
+
+Example 3
+  Text: If only to avoid making this type of film in the future. This film is interesting as an experiment but tells no cogent story.<br /><br />One might feel virtuous for sitting thru it...
+  Label: 0 (negative)
+
+=== Synthetic 20-row split (seed 42) ===
+Split        Rows  Purpose
+train          14  model learns from these rows
+validation      3  compare choices while developing
+test            3  final evaluation on held-out rows
