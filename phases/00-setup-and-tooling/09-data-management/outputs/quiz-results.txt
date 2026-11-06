@@ -1,0 +1,5 @@
+Lesson 09 post-lesson quiz: 3/3
+
+1. Parquet advantage: C (columnar storage improves size and read speed)
+2. streaming=True: C (read rows without downloading the entire dataset)
+3. DVC: A (version data for reproducible experiments across machines)
