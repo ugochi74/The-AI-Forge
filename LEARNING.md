@@ -46,6 +46,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-04 | 0/06 | 3/3 | Set up and verified the Python environment using `.venv` and pip; installed and checked NumPy, Matplotlib, Jupyter, scikit-learn, and pandas; ran the setup script and passed all required checks. |
 | 2026-11-05 | 0/07 | 3/3 | Complete: theory quiz 3/3 (D, C, B); local syntax/path checks passed. Runtime exercises not run because Docker daemon access is denied and Compose is missing; GPU test not run on CPU-only hardware. |
 | 2026-11-05 | 0/08 | 3/3 | Configured VS Code; verified Black on save, Pylance warning/signature, script output Hello, Andrew, and notebook result 12 using project .venv/ipykernel. All eight extensions confirmed. Remote connection not run: no remote host identified. |
+| 2026-11-06 | 0/09 | 3/3 | Loaded and cached MRPC, compared CSV/Parquet, verified repeatable 70/15/15 splits, and streamed C4 without downloading the full corpus. Most useful chatbot practice: keep downloaded artifacts out of Git and use DVC/cloud pointers when sharing versions. |
 
 ## Lesson 07 session record
 
@@ -112,14 +113,15 @@ To become a competent AI Engineer and build a personal AI chatbot.
 
 ## Current session
 
-- Lesson: 0/08 — Editor Setup (**complete**).
-- Quiz: 3/3; answers D, D, D.
-- Verified: eight recommended extensions, Black on save, Pylance diagnostics
-  and hover signatures, script execution, and notebook execution.
-- Troubleshooting: Black waited for environment discovery; configured its
-  python3 interpreter. Created .venv and installed ipykernel for notebooks.
-- Optional Remote SSH connection not run: no remote host identified.
-- Next lesson: 0/09 — Data Management.
+- Lesson: 0/09 — Data Management (**complete**).
+- Quiz: 3/3; answers C, C, A.
+- Verified MRPC caching, five examples, CSV/Parquet size comparison and
+  round-trip, reproducible 70/15/15 splits, C4 streaming, model cache reuse,
+  and lesson-local ignore rules. Practical output is saved under the Lesson 09
+  `outputs/` folder.
+- Reflection: keep downloaded files out of Git; use DVC or cloud storage
+  pointers when a production chatbot needs shared data versions.
+- Next lesson: 0/10 — Terminal & Shell.
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
