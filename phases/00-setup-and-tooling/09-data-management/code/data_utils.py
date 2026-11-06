@@ -22,6 +22,11 @@ def load_and_inspect(dataset_name, config=None, split="train", limit=3):
     return dataset
 
 
+def load_cached_split(dataset_name, config=None, split="train"):
+    """Load a finite split that can be indexed and cached locally."""
+    return load_dataset(dataset_name, name=config, split=split)
+
+
 def convert_format(dataset, output_path):
     output_path = Path(output_path)
     exporters = {
