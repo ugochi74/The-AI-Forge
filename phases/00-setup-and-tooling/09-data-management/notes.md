@@ -17,6 +17,14 @@
   test data for final evaluation; use validation data during model selection.
 - Hugging Face model files cache under `~/.cache/huggingface/hub/`. Repeating
   the config download returned the same cached path.
+- A non-streamed dataset split can be indexed and is cached by `datasets`;
+  `load_cached_split` exposes that path for inspection.
+- MRPC's cached training split was reused for inspection, format conversion,
+  and splitting. Parquet was smaller than CSV for this real dataset sample.
+- C4 English is about 305 GB in full ([dataset card](https://huggingface.co/datasets/allenai/c4)).
+  Streaming let us count examples in short timed windows without downloading
+  the whole corpus. The first row took longer due to connection startup; see
+  `outputs/remaining-exercises.txt`.
 - Lesson-local `.gitignore` rules exclude downloaded `data/` and `models/`
   paths from Git without deleting local files. `git check-ignore -v` verified
   both rules. Git LFS can share large files; DVC tracks data versions stored
@@ -28,4 +36,5 @@
 The streaming preview and data format comparison are recorded under
 `outputs/`. The 20-row split example produced 14 train, 3 validation, and
 3 test rows, with identical assignments when seed 42 was reused. The utility
-also exported and reloaded Parquet, then split the restored dataset.
+also exported and reloaded Parquet, then split the restored dataset. The MRPC
+and C4 practical results are in `outputs/remaining-exercises.txt`.
