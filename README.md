@@ -10,7 +10,7 @@ becoming a competent AI engineer and building a personal AI chatbot.
 
 ## Progress
 
-Currently studying **Phase 00: Setup & Tooling**. Lessons 01–08 are complete. Each has a
+Currently studying **Phase 00: Setup & Tooling**. Lessons 01–09 are complete. Each has a
 **3/3 lesson quiz**.
 
 | Lesson | Status | Work recorded |
@@ -23,6 +23,7 @@ Currently studying **Phase 00: Setup & Tooling**. Lessons 01–08 are complete. 
 | [06 · Python Environments](phases/00-setup-and-tooling/06-python-environments/) | Complete | Created and verified a virtual environment with NumPy, Matplotlib, Jupyter, scikit-learn, and pandas. |
 | [07 · Docker for AI](phases/00-setup-and-tooling/07-docker-for-ai/) | Complete | Quiz 3/3; local syntax/path checks passed. Runtime exercises not run: Docker daemon access denied and Compose missing. GPU test not run: CPU-only host. |
 | [08 · Editor Setup](phases/00-setup-and-tooling/08-editor-setup/) | Complete | Quiz 3/3; eight extensions installed, formatting/type checks, script execution, and notebook execution verified. Remote connection not run: no host identified. |
+| [09 · Data Management](phases/00-setup-and-tooling/09-data-management/) | Complete | Quiz 3/3; streamed IMDB and C4, cached and inspected MRPC, compared CSV/Parquet, verified seeded splits, and ignored downloaded artifacts. |
 
 ## Repository layout
 
@@ -33,6 +34,14 @@ Currently studying **Phase 00: Setup & Tooling**. Lessons 01–08 are complete. 
 - `LEARNING.md`: study plan, quiz scores, and completed lesson history.
 
 ## Current focus
+
+Completed **Data Management** on 2026-11-06. Loaded and cached MRPC, compared
+CSV and Parquet sizes, reloaded Parquet, and verified a repeatable 70/15/15
+split. Streamed C4 briefly without downloading its full corpus. The local
+utility, prompt, and command results are in the
+[Lesson 09 workspace](phases/00-setup-and-tooling/09-data-management/README.md).
+
+## Previous focus: Docker for AI
 
 As of **2026-11-05**, resumed Docker for AI and answered both Python environment
 recall questions correctly (unscored). Discussed why a Python package list alone
@@ -66,7 +75,6 @@ needed for optional future practice. Lesson 7 is complete; the theory quiz is pa
 
 ## Latest lesson
 
-Completed [Editor Setup](phases/00-setup-and-tooling/08-editor-setup/README.md)
-with a **3/3** quiz. Verified formatting on save, type warnings and hover
-signatures, Python script execution, and Jupyter execution with the project
-`.venv`. Next: **Data Management**.
+Completed [Data Management](phases/00-setup-and-tooling/09-data-management/README.md)
+with a **3/3** quiz. Verified dataset loading and streaming, cache reuse, format
+conversion, and repeatable splits. Next: **Terminal & Shell**.
