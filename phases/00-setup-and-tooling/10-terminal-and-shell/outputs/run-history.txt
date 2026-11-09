@@ -1,0 +1,2 @@
+First training run completed
+Second training run completed
