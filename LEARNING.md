@@ -47,6 +47,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-05 | 0/07 | 3/3 | Complete: theory quiz 3/3 (D, C, B); local syntax/path checks passed. Runtime exercises not run because Docker daemon access is denied and Compose is missing; GPU test not run on CPU-only hardware. |
 | 2026-11-05 | 0/08 | 3/3 | Configured VS Code; verified Black on save, Pylance warning/signature, script output Hello, Andrew, and notebook result 12 using project .venv/ipykernel. All eight extensions confirmed. Remote connection not run: no remote host identified. |
 | 2026-11-06 | 0/09 | 3/3 | Loaded and cached MRPC, compared CSV/Parquet, verified repeatable 70/15/15 splits, and streamed C4 without downloading the full corpus. Most useful chatbot practice: keep downloaded artifacts out of Git and use DVC/cloud pointers when sharing versions. |
+| 2026-11-09 | 0/10 | Not recorded | Practised shell pipelines and text filtering (`grep`, `wc`, `awk`), output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Saved lesson documentation, reflection, and practice outputs; committed and pushed the work on `main`. |
 
 ## Lesson 07 session record
 
@@ -122,6 +123,16 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Reflection: keep downloaded files out of Git; use DVC or cloud storage
   pointers when a production chatbot needs shared data versions.
 - Next lesson: 0/10 — Terminal & Shell.
+
+**## Current session**
+
+- Lesson: 0/10 — Terminal & Shell (**complete**).
+- Covered: command pipelines, text filtering, output redirection, system resource monitoring, rsync synchronization, and shell aliases.
+- Practical work: analyzed a sample training log, extracted four loss values, captured errors and command output, recorded training history, and synchronized local directories using rsync.
+- Environment notes: SSH, SCP, and rsync clients are available. Personal SSH key generation is not permitted by workplace policy. `tmux` and `screen` were not installed.
+- Git: lesson documentation, notes, reflection, and practice outputs were committed and pushed on `main`. Corrected rsync commit: `580f7ea`.
+- Quiz: not recorded.
+- Next lesson: 0/11 — Linux for AI.
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
