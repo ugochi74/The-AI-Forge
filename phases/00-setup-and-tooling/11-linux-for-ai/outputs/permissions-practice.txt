@@ -1,0 +1,18 @@
+# Linux File Permissions Practice
+
+## Commands practised
+- umask: inspect the default permission mask.
+- chmod 640: set file permissions explicitly.
+- stat: inspect file permissions and ownership.
+
+## Observed results
+- Current umask: 0002
+- File permissions: -rw-r----- (640)
+- Owner and group names are omitted from this public record.
+
+## What permission 640 means
+- Owner: read and write.
+- Group: read only.
+- Others: no permissions.
+
+The file permissions were changed and verified using stat.
