@@ -38,7 +38,6 @@ To become a competent AI Engineer and build a personal AI chatbot.
 ## Progress log
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
-| 2026-11-10 | 0/11 | Not recorded | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. |
 | 2026-10-31 | 0/01 | 3/3 | Passed the Dev Environment quiz; ran and recorded all four language examples; set up `course-repo/.venv` with NumPy, Matplotlib, Jupyter, and CPU PyTorch; verified Node/pnpm, Rust/Cargo, Julia, and the Python packages; beginner preflight passed 2/2. |
 | 2026-11-01 | 0/02 | 3/3 | Practiced staging and committing selected files, branches, `.gitignore`, and history inspection. Forked the course repository and pushed `my-progress` (`da22ef4`) to the personal fork. |
 | 2026-11-01 | 0/03 | 3/3 | Verified the local environment is CPU-only, configured Colab with a Tesla T4, confirmed PyTorch CUDA access, measured 2.797s CPU vs 0.088s GPU (~32x), and estimated about 8B fp16 weights from T4 memory. |
@@ -49,6 +48,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-05 | 0/08 | 3/3 | Configured VS Code; verified Black on save, Pylance warning/signature, script output Hello, Andrew, and notebook result 12 using project .venv/ipykernel. All eight extensions confirmed. Remote connection not run: no remote host identified. |
 | 2026-11-06 | 0/09 | 3/3 | Loaded and cached MRPC, compared CSV/Parquet, verified repeatable 70/15/15 splits, and streamed C4 without downloading the full corpus. Most useful chatbot practice: keep downloaded artifacts out of Git and use DVC/cloud pointers when sharing versions. |
 | 2026-11-09 | 0/10 | Not recorded | Practised shell pipelines and text filtering (`grep`, `wc`, `awk`), output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Saved lesson documentation, reflection, and practice outputs; committed and pushed the work on `main`. |
+| 2026-11-10 | 0/11 | Not recorded | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. |
 
 ## Lesson 07 session record
 
@@ -134,6 +134,24 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Git: lesson documentation, notes, reflection, and practice outputs were committed and pushed on `main`. Corrected rsync commit: `580f7ea`.
 - Quiz: not recorded.
 - Next lesson: 0/11 — Linux for AI.
+
+
+## Current session
+
+Phase: 0 — Setup & Tooling (in progress).
+
+Lesson: 0/11 — Linux for AI (practical work completed; quiz pending).
+
+Covered: Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking.
+
+Practical work: ran the system-check and process-network practice scripts and saved three output reports.
+
+Verification: both Bash scripts passed syntax checks; the three reports passed the privacy scan; git diff --check was clean.
+
+Quiz: pending; no score or pass is recorded yet.
+
+Next action: resume Lesson 0/11 and complete its quiz. After it is recorded, continue to 0/12 — Debugging & Profiling. Phase 1 has not started.
+
 
 ## Review queue
 Empty for now; learn adds lessons the quizzes flag.
