@@ -14,5 +14,7 @@ layout: notes, code, verification, outputs, and reflection.
 - [07 · Docker for AI](07-docker-for-ai/notes.md)
 - [08 · Editor Setup](08-editor-setup/README.md)
 - [09 · Data Management](09-data-management/README.md)
+- [10 · Terminal and Shell](10-terminal-and-shell/notes.md)
+- [11 · Linux for AI](11-linux-for-ai/notes.md)
 
 Course outline: [Phase 00 lessons](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md#phase-0)
