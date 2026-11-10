@@ -1,0 +1,70 @@
+======================================
+PROCESS AND NETWORKING PRACTICE
+======================================
+Tue Nov 10 11:51:22 AM +01 2026
+
+1. PROCESS INFORMATION
+--------------------------------------
+Current shell:
+    PID    PPID STAT COMMAND
+ 179403    6577 S+   bash
+
+2. BACKGROUND PROCESS
+--------------------------------------
+Started a temporary sleep process.
+Its process ID is: 179412
+
+Process details:
+    PID    PPID STAT %CPU %MEM     ELAPSED COMMAND
+ 179412  179408 S+    0.0  0.0       00:00 sleep
+
+Background jobs:
+[1]+ 179412 Running                 sleep 300 &
+
+Stopping only the temporary process...
+Temporary process stopped.
+
+3. NETWORK INTERFACES
+--------------------------------------
+Interface names and link states:
+lo UNKNOWN
+wlo1 UP
+docker0 DOWN
+
+Interface address status (actual addresses redacted):
+lo UNKNOWN [address values redacted]
+wlo1 UP [address values redacted]
+docker0 DOWN [address values redacted]
+
+Routing summary:
+Default route configured: yes
+Total route entries: 3
+
+4. NETWORK CONNECTIONS
+--------------------------------------
+Total network sockets: 15
+udp sockets: 9
+tcp sockets: 6
+Local and peer addresses have been redacted.
+
+5. DNS LOOKUP
+--------------------------------------
+DNS lookup for pypi.org: successful
+
+6. PACKAGE INFORMATION
+--------------------------------------
+  Installed: 3.12.3-0ubuntu2.1
+  Candidate: 3.12.3-0ubuntu2.1
+
+7. PROCESS MANAGEMENT COMMANDS
+--------------------------------------
+ps     - display processes
+jobs   - display background jobs in this shell
+kill   - send a signal to a process
+wait   - wait for a background process to finish
+nice   - start a process with adjusted scheduling priority
+top    - monitor running processes
+
+======================================
+PRACTICE COMPLETED
+======================================
