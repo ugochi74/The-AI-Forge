@@ -1,0 +1,97 @@
+======================================
+LINUX FOR AI - SYSTEM CHECK
+======================================
+Date: Tue Nov 10 11:51:20 AM +01 2026
+
+1. OPERATING SYSTEM
+--------------------------------------
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+Linux 6.17.0-14-generic x86_64
+
+2. USER AND PERMISSIONS
+--------------------------------------
+User ID: 1004
+Primary group ID: 1006
+Current umask:
+0002
+Permissions practice file:
+-rw-r----- 640
+
+3. RUNNING PROCESSES
+--------------------------------------
+    PID    PPID STAT %CPU %MEM     ELAPSED COMMAND
+ 179369  179361 R+    150  0.1       00:00 ps
+ 135781    3681 Sl    9.9  6.6    01:26:20 chrome
+   2763    2387 Rsl   6.4  2.9  1-10:24:13 gnome-shell
+   5402    5337 Rl    1.8  6.1  1-10:17:51 code
+ 112862    3681 Sl    1.4  8.9    19:06:22 chrome
+   6408    5329 Rl    1.2  2.3  1-10:14:29 code
+ 123366    3681 Sl    0.7  4.3    13:18:26 chrome
+   3710    3678 Sl    0.6  2.4  1-10:23:57 chrome
+   3659    2763 SLl   0.6  4.1  1-10:23:59 chrome
+   5602    5329 Sl    0.4  1.0  1-10:17:37 code
+  28154    3681 Sl    0.3  1.6  1-02:19:05 chrome
+   5374    5334 Sl    0.2  0.9  1-10:17:52 code
+   3715    3659 Sl    0.2  1.4  1-10:23:57 chrome
+   5010    3681 Sl    0.2  3.7  1-10:22:00 chrome
+
+Current system uptime:
+ 11:51:21 up 1 day, 10:29,  1 user,  load average: 2.52, 2.31, 2.20
+
+4. MEMORY AND CPU
+--------------------------------------
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       2.7Gi       779Mi       403Mi       846Mi       953Mi
+Swap:          3.7Gi       3.4Gi       233Mi
+Available CPU cores:
+2
+
+5. DISK SPACE
+--------------------------------------
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  233G  111G  111G  51% /
+Lesson folder size:
+64K (lesson directory)
+
+6. PACKAGE MANAGEMENT
+--------------------------------------
+apt 2.7.14 (amd64)
+  Installed: 8.5.0-2ubuntu10.6
+  Candidate: 8.5.0-2ubuntu10.16
+
+7. NETWORK CONNECTIVITY
+--------------------------------------
+DNS lookup for pypi.org: successful
+HTTPS response status: 200
+
+8. LONG-RUNNING SESSION AND GPU TOOLS
+--------------------------------------
+tmux: not available
+screen: not available
+nvidia-smi: not available
+
+9. OTHER USEFUL SYSTEM TOOLS
+--------------------------------------
+git: available
+python3: available
+pip3: available
+rsync: available
+ssh: available
+scp: available
+
+======================================
+SYSTEM CHECK COMPLETED
+======================================
