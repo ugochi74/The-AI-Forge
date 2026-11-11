@@ -1,0 +1,5 @@
+numpy==2.5.4
+tensorboard==2.20.0
+setuptools==80.9.0
+line_profiler==5.1.0
+memory_profiler==0.61.0
