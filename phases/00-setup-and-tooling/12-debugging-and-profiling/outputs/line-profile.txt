@@ -1,0 +1,23 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python -c import sys;sys.path.insert(0,"code");from line_profiler import LineProfiler;from profile_practice import load_data,score_data;p=LineProfiler(load_data,score_data);p.runcall(lambda:score_data(load_data()));p.print_stats()
+Timer unit: 1e-09 s
+
+Total time: 0.0660357 s
+File: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/profile_practice.py
+Function: load_data at line 8
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     8                                           def load_data():
+     9         1   66035668.0  6.6e+07    100.0      return [float(i) / 100 for i in range(100_000)]
+
+Total time: 0.0976103 s
+File: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/profile_practice.py
+Function: score_data at line 12
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    12                                           def score_data(values):
+    13         1   97610306.0 9.76e+07    100.0      return sum(math.sqrt(value) for value in values)
+
+
+Exit code: 0
