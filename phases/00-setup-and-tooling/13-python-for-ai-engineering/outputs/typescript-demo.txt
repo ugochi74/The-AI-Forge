@@ -1,0 +1,16 @@
+$ tsx code/main.ts
+Python for AI engineering: a standard-library toolkit
+data     400 records, CSV and JSON load back unchanged: True
+split    320 train, 80 test, records in both: 0
+batches  size 48: [48, 48, 48, 48, 48, 48, 32]
+scale    train feature means after standardizing: [0.0, 0.0]
+model    nearest-centroid test accuracy: raw 0.89, standardized 0.91
+speed    dot product of 200,000 floats, best of 5:
+           index loop         0.50 ms
+           zip generator     10.72 ms
+           map + mul         22.17 ms
+memory   peak bytes to sum 100,000 squares:
+           list              5,670,528
+           generator           934,192
+
+Exit code: 0
