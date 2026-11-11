@@ -1,0 +1,39 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python -m unittest discover -s code/tests -v
+test_bad_size_raises_at_call_time (test_main.BatchTests.test_bad_size_raises_at_call_time) ... ok
+test_drop_last_removes_partial_batch (test_main.BatchTests.test_drop_last_removes_partial_batch) ... ok
+test_is_lazy (test_main.BatchTests.test_is_lazy) ... ok
+test_last_batch_is_partial (test_main.BatchTests.test_last_batch_is_partial) ... ok
+test_works_on_a_one_pass_generator (test_main.BatchTests.test_works_on_a_one_pass_generator) ... ok
+test_demo_summary_and_report (test_main.DemoTests.test_demo_summary_and_report) ... ok
+test_csv_and_json_round_trip_exactly (test_main.LoaderTests.test_csv_and_json_round_trip_exactly) ... ok
+test_csv_strings_become_floats_and_int_label (test_main.LoaderTests.test_csv_strings_become_floats_and_int_label) ... ok
+test_custom_label_field (test_main.LoaderTests.test_custom_label_field) ... ok
+test_json_rows_are_read_in_the_first_row_order (test_main.LoaderTests.test_json_rows_are_read_in_the_first_row_order) ... ok
+test_missing_label_raises (test_main.LoaderTests.test_missing_label_raises) ... ok
+test_missing_or_extra_feature_raises (test_main.LoaderTests.test_missing_or_extra_feature_raises) ... ok
+test_unknown_suffix_raises (test_main.LoaderTests.test_unknown_suffix_raises) ... ok
+test_best_time_is_positive (test_main.MeasurementTests.test_best_time_is_positive) ... ok
+test_list_holds_far_more_memory_than_generator (test_main.MeasurementTests.test_list_holds_far_more_memory_than_generator) ... ok
+test_batched_centroids_equal_full_pass (test_main.ModelTests.test_batched_centroids_equal_full_pass) ... ok
+test_predict_picks_nearest_centroid (test_main.ModelTests.test_predict_picks_nearest_centroid) ... ok
+test_bad_fraction_raises (test_main.SplitTests.test_bad_fraction_raises) ... ok
+test_both_sides_keep_at_least_one_item (test_main.SplitTests.test_both_sides_keep_at_least_one_item) ... ok
+test_different_seed_gives_different_split (test_main.SplitTests.test_different_seed_gives_different_split) ... ok
+test_input_is_not_modified (test_main.SplitTests.test_input_is_not_modified) ... ok
+test_same_seed_gives_same_split (test_main.SplitTests.test_same_seed_gives_same_split) ... ok
+test_sizes_and_disjoint_cover (test_main.SplitTests.test_sizes_and_disjoint_cover) ... ok
+test_closure_gives_zero_mean_unit_std (test_main.StandardizerTests.test_closure_gives_zero_mean_unit_std) ... ok
+test_closure_keeps_training_statistics (test_main.StandardizerTests.test_closure_keeps_training_statistics) ... ok
+test_constant_column_does_not_divide_by_zero (test_main.StandardizerTests.test_constant_column_does_not_divide_by_zero) ... ok
+test_dot (test_main.VectorMathTests.test_dot) ... ok
+test_dot_length_mismatch_raises (test_main.VectorMathTests.test_dot_length_mismatch_raises) ... ok
+test_dot_variants_agree (test_main.VectorMathTests.test_dot_variants_agree) ... ok
+test_mean_and_std_match_statistics_module (test_main.VectorMathTests.test_mean_and_std_match_statistics_module) ... ok
+test_mean_of_empty_raises (test_main.VectorMathTests.test_mean_of_empty_raises) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.609s
+
+OK
+
+Exit code: 0
