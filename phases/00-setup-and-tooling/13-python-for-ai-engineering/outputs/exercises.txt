@@ -1,0 +1,41 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python code/exercises.py
+
+Seed 7
+Python for AI engineering: a standard-library toolkit
+data     400 records, CSV and JSON load back unchanged: True
+split    320 train, 80 test, records in both: 0
+batches  size 48: [48, 48, 48, 48, 48, 48, 32]
+scale    train feature means after standardizing: [0.0, 0.0]
+model    nearest-centroid test accuracy: raw 0.86, standardized 0.89
+speed    dot product of 200,000 floats, best of 5:
+           index loop        19.46 ms
+           zip generator     20.05 ms
+           map + mul         11.81 ms
+memory   peak bytes to sum 100,000 squares:
+           list              4,000,456
+           generator               464
+
+Seed 8
+Python for AI engineering: a standard-library toolkit
+data     400 records, CSV and JSON load back unchanged: True
+split    320 train, 80 test, records in both: 0
+batches  size 48: [48, 48, 48, 48, 48, 48, 32]
+scale    train feature means after standardizing: [0.0, 0.0]
+model    nearest-centroid test accuracy: raw 0.82, standardized 0.97
+speed    dot product of 200,000 floats, best of 5:
+           index loop        19.41 ms
+           zip generator     20.00 ms
+           map + mul         12.13 ms
+memory   peak bytes to sum 100,000 squares:
+           list              4,000,456
+           generator               464
+
+Median agrees with statistics.median on odd, even, negative and singleton inputs.
+Streaming 200,000 rows peak bytes: 48225
+Loading 200,000 rows peak bytes: 95707587
+matvec size, Python seconds, NumPy seconds: 4 8.351984433829784e-06 4.008004907518625e-06
+matvec size, Python seconds, NumPy seconds: 64 0.00046366098104044795 6.732996553182602e-06
+matvec size, Python seconds, NumPy seconds: 1024 0.10598592497990467 0.0011631319939624518
+Local workspace construct counts (subset of upstream course): {"ListComp": 6, "Yield": 2, "With": 9} files: 14
+
+Exit code: 0
