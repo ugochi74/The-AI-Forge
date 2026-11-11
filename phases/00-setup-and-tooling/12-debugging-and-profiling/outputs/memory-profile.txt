@@ -1,0 +1,12 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python -c import sys;sys.path.insert(0,"code");from memory_profiler import profile;from profile_practice import load_data;values=profile(load_data)();print("Rows:",len(values))
+Filename: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/profile_practice.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     8    217.9 MiB    217.9 MiB           1   def load_data():
+     9    221.7 MiB      3.8 MiB      100001       return [float(i) / 100 for i in range(100_000)]
+
+
+Rows: 100000
+
+Exit code: 0
