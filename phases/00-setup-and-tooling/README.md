@@ -17,4 +17,7 @@ layout: notes, code, verification, outputs, and reflection.
 - [10 · Terminal and Shell](10-terminal-and-shell/notes.md)
 - [11 · Linux for AI](11-linux-for-ai/notes.md)
 
+- [12 · Debugging & Profiling](12-debugging-and-profiling/README.md) — complete; quiz 3/3
+- [13 · Python for AI Engineering](13-python-for-ai-engineering/README.md) — complete; quiz 2/2
+
 Course outline: [Phase 00 lessons](https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/README.md#phase-0)
