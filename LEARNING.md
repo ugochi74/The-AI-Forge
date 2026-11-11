@@ -14,7 +14,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 ## Path
 | Phase | Name | Status | Est. hours |
 |-------|------|--------|------------|
-| 0 | Setup & Tooling | Do | 16 |
+| 0 | Setup & Tooling | Done | 16 |
 | 1 | Math Foundations | Do | 23 |
 | 2 | ML Fundamentals | Do | 26 |
 | 3 | Deep Learning Core | Do | 15 |
@@ -47,8 +47,10 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-05 | 0/07 | 3/3 | Complete: theory quiz 3/3 (D, C, B); local syntax/path checks passed. Runtime exercises not run because Docker daemon access is denied and Compose is missing; GPU test not run on CPU-only hardware. |
 | 2026-11-05 | 0/08 | 3/3 | Configured VS Code; verified Black on save, Pylance warning/signature, script output Hello, Andrew, and notebook result 12 using project .venv/ipykernel. All eight extensions confirmed. Remote connection not run: no remote host identified. |
 | 2026-11-06 | 0/09 | 3/3 | Loaded and cached MRPC, compared CSV/Parquet, verified repeatable 70/15/15 splits, and streamed C4 without downloading the full corpus. Most useful chatbot practice: keep downloaded artifacts out of Git and use DVC/cloud pointers when sharing versions. |
-| 2026-11-09 | 0/10 | Not recorded | Practised shell pipelines and text filtering (`grep`, `wc`, `awk`), output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Saved lesson documentation, reflection, and practice outputs; committed and pushed the work on `main`. |
-| 2026-11-10 | 0/11 | Not recorded | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. |
+| 2026-11-09 | 0/10 | 3/3 | Practised shell pipelines and text filtering (`grep`, `wc`, `awk`), output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Saved lesson documentation, reflection, and practice outputs; committed and pushed the work on `main`. Quiz completed 2026-11-10: C, D, A; correctly identified tmux session reattachment, combined stdout/stderr redirection, and SSH local port forwarding. |
+| 2026-11-10 | 0/11 | 3/3 | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. Passed the quiz on execute permissions, directory disk usage, and macOS/Linux sed differences (C, C, D). |
+| 2026-11-11 | 0/12 | 3/3 | Quiz answers B, C, D: data leakage, data-loading bottlenecks, and NaN debugging. Correctly matched tensor input shape, recognized overfitting, and chose tracemalloc for growing Python allocations. CPU practical checks passed, including training, NaN injection, scripted pdb, line/memory profiling and TensorBoard HTTP 200. GPU checks skipped. Learner reflection saved; hands-on learner debugger use is not claimed. |
+| 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
 
 ## Lesson 07 session record
 
@@ -132,25 +134,25 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Practical work: analyzed a sample training log, extracted four loss values, captured errors and command output, recorded training history, and synchronized local directories using rsync.
 - Environment notes: SSH, SCP, and rsync clients are available. Personal SSH key generation is not permitted by workplace policy. `tmux` and `screen` were not installed.
 - Git: lesson documentation, notes, reflection, and practice outputs were committed and pushed on `main`. Corrected rsync commit: `580f7ea`.
-- Quiz: not recorded.
+- Quiz: 3/3, completed 2026-11-10; answers C, D, A. Correctly identified tmux session reattachment, combined stdout/stderr redirection, and SSH local port forwarding.
 - Next lesson: 0/11 — Linux for AI.
 
 
 ## Current session
 
-Phase: 0 — Setup & Tooling (in progress).
+Phase 0 — Setup & Tooling: **complete**. Lessons 01–13 have recorded quiz results.
 
-Lesson: 0/11 — Linux for AI (practical work completed; quiz pending).
-
-Covered: Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking.
-
-Practical work: ran the system-check and process-network practice scripts and saved three output reports.
-
-Verification: both Bash scripts passed syntax checks; the three reports passed the privacy scan; git diff --check was clean.
-
-Quiz: pending; no score or pass is recorded yet.
-
-Next action: resume Lesson 0/11 and complete its quiz. After it is recorded, continue to 0/12 — Debugging & Profiling. Phase 1 has not started.
+- Lesson 0/12 — Debugging & Profiling: **complete**, quiz **3/3** (B, C, D), 2026-11-11.
+- Lesson 0/13 — Python for AI Engineering: **complete**, quiz **2/2** (D, A), 2026-11-11.
+- Learner checkpoints: matched tensor input dimensions, recognized overfitting, selected tracemalloc for memory growth, predicted repeatable splits, batch sizes, standardization arithmetic and generator memory behavior.
+- NaN detection needed guided examples earlier; revisit it in a future warm-up.
+- Agent-executed practical work: full CPU debugging toolkit; 300-step training with TensorBoard; deliberate NaN failure; cProfile, line_profiler, memory_profiler and tracemalloc; scripted pdb inspection; TensorBoard HTTP 200; Python and TypeScript toolkit demos; 31 course tests; all five Python exercises including NumPy comparisons.
+- GPU memory exercise explicitly skipped: no CUDA/MPS GPU. Scripted pdb verification is not hands-on learner debugger evidence.
+- Environment: project `.venv`; CPU PyTorch, NumPy, TensorBoard and profilers installed. Pinned setuptools 80.9.0 fixes TensorBoard's pkg_resources dependency. TypeScript uses local tsx and package-lock.json. Final pip check passed.
+- Learner reflection: "I will use tools like tracemalloc and cProfile to catch memory leaks in long chat sessions and pinpoint slow bottlenecks in my retrieval"
+- Source manifests, runbooks, dependency versions, reflection, and actual output reports are saved in the Lesson 12 and 13 folders.
+- Next lesson: **1/01 — Linear Algebra Intuition**. Phase 1 has not started.
+- Optional phase review: `check-understanding 0`.
 
 
 ## Review queue
