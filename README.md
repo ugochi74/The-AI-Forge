@@ -9,9 +9,9 @@ Building and documenting my AI engineering learning journey, with the goal of be
 
 ## Progress
 
-Currently working through **Phase 00: Setup & Tooling**.
+**Phase 00: Setup & Tooling is complete.** Next: Phase 1 — Math Foundations.
 
-Lessons 01–09 have recorded **3/3 lesson quiz scores**. Lesson 10's practical work is complete, but its quiz score has not been recorded. Lesson 11's practical work is complete, and its quiz is pending.
+Lessons 01–12 have recorded **3/3 lesson quiz scores**; Lesson 13 has **2/2**.
 
 | Lesson | Status | Work recorded |
 |--------|--------|---------------|
@@ -24,8 +24,10 @@ Lessons 01–09 have recorded **3/3 lesson quiz scores**. Lesson 10's practical 
 | [07 · Docker for AI](phases/00-setup-and-tooling/07-docker-for-ai/) | Complete | Quiz 3/3; local syntax/path checks passed. Runtime exercises not run: Docker daemon access denied and Compose missing. GPU status not verified because `nvidia-smi` was unavailable. |
 | [08 · Editor Setup](phases/00-setup-and-tooling/08-editor-setup/) | Complete | Quiz 3/3; eight extensions installed, formatting/type checks, script execution, and notebook execution verified. Remote connection not run: no host identified. |
 | [09 · Data Management](phases/00-setup-and-tooling/09-data-management/) | Complete | Quiz 3/3; streamed IMDB and C4, cached and inspected MRPC, compared CSV/Parquet, verified seeded splits, and ignored downloaded artifacts. |
-| [10 · Terminal & Shell](phases/00-setup-and-tooling/10-terminal-and-shell/docs/en.md) | Complete | Practiced command pipelines, text filtering, output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Quiz score not recorded. |
-| [11 · Linux for AI](phases/00-setup-and-tooling/11-linux-for-ai/) | In progress | Completed filesystem navigation, permissions, ownership, process management, resource monitoring, APT, and networking exercises. Quiz pending. |
+| [10 · Terminal & Shell](phases/00-setup-and-tooling/10-terminal-and-shell/docs/en.md) | Complete | Practiced command pipelines, text filtering, output redirection, system monitoring, rsync synchronization, and persistent Zsh aliases. Quiz: 3/3. |
+| [11 · Linux for AI](phases/00-setup-and-tooling/11-linux-for-ai/) | Complete | Quiz 3/3; completed filesystem navigation, permissions, ownership, process management, resource monitoring, APT, and networking exercises. Quiz recorded. |
+| [12 · Debugging & Profiling](phases/00-setup-and-tooling/12-debugging-and-profiling/) | Complete | Quiz 3/3; CPU practical checks passed; GPU skipped. |
+| [13 · Python for AI Engineering](phases/00-setup-and-tooling/13-python-for-ai-engineering/) | Complete | Quiz 2/2; Python/TypeScript demos, 31 tests and five exercises passed. |
 
 ## Repository layout
 
@@ -34,21 +36,15 @@ Lessons 01–09 have recorded **3/3 lesson quiz scores**. Lesson 10's practical 
 - `AI-Engineering-skills-map/`: AI engineering skills articles.
 - `LEARNING.md`: study plan, quiz scores, and completed lesson history.
 
-## Current focus: Linux for AI
+## Current progress: Phase 0 complete
 
-Working on **Phase 00, Lesson 11 — Linux for AI**.
+[Lesson 12 — Debugging & Profiling](phases/00-setup-and-tooling/12-debugging-and-profiling/README.md): quiz **3/3**. CPU debugging, training, NaN injection, profiling, scripted debugger inspection, and TensorBoard checks passed. GPU work was skipped on this CPU-only environment.
 
-Practiced filesystem navigation, file permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking.
+[Lesson 13 — Python for AI Engineering](phases/00-setup-and-tooling/13-python-for-ai-engineering/README.md): quiz **2/2**. Python and TypeScript demos, all 31 supplied tests, and all five Python exercises passed. Outputs, reflections, dependency versions and runbooks are saved in both lesson workspaces.
 
-Created and ran system-check and process-network practice scripts. Both Bash scripts passed syntax checks. The three output reports passed the privacy scan, and `git diff --check` was clean.
+The agent executed the practical checks; learner checkpoints, quiz answers and reflection were recorded separately. Independent debugger practice remains available in the runbook.
 
-Some workstation limitations were recorded: `tmux`, `screen`, and `nvidia-smi` are unavailable. The exercises document these limitations rather than claiming those tools were tested successfully.
-
-The [Linux lesson workspace](phases/00-setup-and-tooling/11-linux-for-ai/) contains the scripts, notes, outputs, reflection, and verification records.
-
-**Current status:** Practical work completed; quiz pending.
-
-**Next action:** Complete the Lesson 11 quiz. After recording the result, continue to **Lesson 12 — Debugging & Profiling**.
+**Next lesson:** Phase 1, Lesson 01 — Linear Algebra Intuition. Use `learn` to start, or `check-understanding 0` for an optional Phase 0 review.
 
 ## Previous focus: Terminal & Shell
 
