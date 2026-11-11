@@ -1,0 +1,22 @@
+[
+  {
+    "path": "phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py",
+    "url": "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py",
+    "sha256": "3f680fb74a7d43dc7392d6b5c6362fd3e3f7224535d693ea0445c8bf84824db0"
+  },
+  {
+    "path": "phases/00-setup-and-tooling/12-debugging-and-profiling/docs/en.md",
+    "url": "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/phases/00-setup-and-tooling/12-debugging-and-profiling/docs/en.md",
+    "sha256": "2c8060d42a1115002a602a1db7241eb5338a7169661c238163c16c5653136513"
+  },
+  {
+    "path": "phases/00-setup-and-tooling/12-debugging-and-profiling/outputs/prompt-debug-ai-code.md",
+    "url": "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/phases/00-setup-and-tooling/12-debugging-and-profiling/outputs/prompt-debug-ai-code.md",
+    "sha256": "9a09afe8f9083c42dabb8c67ec7410a9455cbbcd7bf7533c07802f23788c4e96"
+  },
+  {
+    "path": "phases/00-setup-and-tooling/12-debugging-and-profiling/quiz.json",
+    "url": "https://raw.githubusercontent.com/rohitg00/ai-engineering-from-scratch/main/phases/00-setup-and-tooling/12-debugging-and-profiling/quiz.json",
+    "sha256": "587d0e490b516bf2dff412133cb7926090d9cfbc89e0f267456510cdd6966ba8"
+  }
+]
