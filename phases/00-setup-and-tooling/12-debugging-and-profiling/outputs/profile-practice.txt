@@ -1,0 +1,9 @@
+$ python3 code/profile_practice.py
+  [data loading] 0.1799s
+  [scoring] 0.0184s
+/home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/profile_practice.py:9: size=3126 KiB, count=99985, average=32 B
+/home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py:39: size=189 B, count=3, average=63 B
+/home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/code/debug_tools.py:38: size=24 B, count=1, average=24 B
+Score: 2108169.2746151723
+
+Exit code: 0
