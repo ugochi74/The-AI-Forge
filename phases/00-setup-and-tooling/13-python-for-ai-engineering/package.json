@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tsx": "4.23.15"
+  },
+  "private": true,
+  "scripts": {
+    "demo": "tsx code/main.ts"
+  }
+}
