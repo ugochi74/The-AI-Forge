@@ -1,0 +1,6 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python -c from tensorboard.backend.event_processing.event_accumulator import EventAccumulator;e=EventAccumulator("runs/overfit");e.Reload();print(e.Tags());t=e.Scalars("loss/train");v=e.Scalars("loss/validation");print("Train first/last:",t[0].value,t[-1].value);print("Validation first/last:",v[0].value,v[-1].value);assert len(t)>=300 and len(v)>=300;assert t[-1].value<t[0].value and v[-1].value>v[0].value
+{'images': [], 'audio': [], 'histograms': ['weights/0.weight', 'gradients/0.weight', 'weights/0.bias', 'gradients/0.bias', 'weights/2.weight', 'gradients/2.weight', 'weights/2.bias', 'gradients/2.bias'], 'scalars': ['loss/train', 'loss/validation'], 'distributions': ['weights/0.weight', 'gradients/0.weight', 'weights/0.bias', 'gradients/0.bias', 'weights/2.weight', 'gradients/2.weight', 'weights/2.bias', 'gradients/2.bias'], 'tensors': [], 'graph': False, 'meta_graph': False, 'run_metadata': []}
+Train first/last: 1.9709879159927368 5.662830062647117e-06
+Validation first/last: 1.5422351360321045 8.860594749450684
+
+Exit code: 0
