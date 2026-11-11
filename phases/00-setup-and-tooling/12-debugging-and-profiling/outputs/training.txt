@@ -1,0 +1,26 @@
+$ /home/recoding/The-AI-Forge/.venv/bin/python code/training_practice.py
+  Input: torch.Size([12, 8])
+    0: torch.Size([12, 8]) -> torch.Size([12, 64])
+    1: torch.Size([12, 64]) -> torch.Size([12, 64])
+    2: torch.Size([12, 64]) -> torch.Size([12, 1])
+  Model device: cpu
+    Tensor 0: cpu [OK]
+    Tensor 1: cpu [OK]
+  training inputs: shape=torch.Size([12, 8]), dtype=torch.float32, device=cpu, min=-2.9662, max=2.2983, mean=-0.1009, has_nan=False
+  NaN loss detected at step 0
+    NaN gradient in layer.weight
+    NaN gradient in layer.bias
+Top Python allocations (tensor storage is not included):
+<frozen importlib._bootstrap_external>:753: size=39.4 MiB, count=264970, average=156 B
+/usr/lib/python3.12/dataclasses.py:473: size=1499 KiB, count=14938, average=103 B
+/usr/lib/python3.12/linecache.py:137: size=795 KiB, count=8227, average=99 B
+/home/recoding/The-AI-Forge/.venv/lib/python3.12/site-packages/torch/_dynamo/variables/base.py:1726: size=665 KiB, count=2167, average=314 B
+<frozen importlib._bootstrap>:488: size=651 KiB, count=3308, average=202 B
+First epoch: {'step': 0, 'train': 1.9709879159927368, 'validation': 1.5422351360321045}
+Last epoch: {'step': 299, 'train': 5.662830062647117e-06, 'validation': 8.860594749450684}
+Measured loading / forward / backward+update seconds: 0.0006988669920247048 0.45559442290687 1.7104887136956677
+Overfitting pattern: True
+CUDA available: False
+TensorBoard event directory: /home/recoding/The-AI-Forge/phases/00-setup-and-tooling/12-debugging-and-profiling/runs/overfit
+
+Exit code: 0
