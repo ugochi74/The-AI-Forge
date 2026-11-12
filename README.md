@@ -81,3 +81,57 @@ Python and YAML syntax checks passed. Actual container builds and runtime exerci
 The [Lesson 7 outputs](phases/00-setup-and-tooling/07-docker-for-ai/outputs/README.md) include captured prerequisite errors and a script for recording future build and exercise results automatically.
 
 The [Docker session reflection](phases/00-setup-and-tooling/07-docker-for-ai/reflection.md) records the concepts reviewed, misconceptions clarified, and hands-on work still needed for optional future practice.
+
+
+
+
+# Phase 01: Math Foundations
+
+**Goal:** Understand the mathematical foundations behind AI and machine learning through practical exercises and code.
+
+## Lesson Progress
+
+| No. | Lesson | Status |
+|---|---|---|
+| 01 | Linear Algebra Intuition | In progress |
+| 02 | Vectors, Matrices & Operations | Not started |
+| 03 | Matrix Transformations & Eigenvalues | Not started |
+| 04 | Calculus for ML: Derivatives & Gradients | Not started |
+| 05 | Chain Rule & Automatic Differentiation | Not started |
+| 06 | Probability & Distributions | Not started |
+| 07 | Bayes' Theorem & Statistical Thinking | Not started |
+| 08 | Optimization: Gradient Descent Family | Not started |
+| 09 | Information Theory: Entropy, KL Divergence | Not started |
+| 10 | Dimensionality Reduction: PCA, t-SNE, UMAP | Not started |
+| 11 | Singular Value Decomposition | Not started |
+| 12 | Tensor Operations | Not started |
+| 13 | Numerical Stability | Not started |
+| 14 | Norms & Distances | Not started |
+| 15 | Statistics for ML | Not started |
+| 16 | Sampling Methods | Not started |
+| 17 | Linear Systems | Not started |
+| 18 | Convex Optimization | Not started |
+| 19 | Complex Numbers for AI | Not started |
+| 20 | The Fourier Transform | Not started |
+| 21 | Graph Theory for ML | Not started |
+| 22 | Stochastic Processes | Not started |
+
+## Standard Lesson Structure
+
+Each lesson will contain:
+
+- `notes.md` — explanations and important concepts.
+- `code/` — practical implementations.
+- `outputs/` — actual program outputs and exercise results.
+- `verification/` — test results and evidence.
+- `reflection.md` — personal learning reflections.
+
+## Learning Rules
+
+1. Understand the concept before implementing it.
+2. Write and run the practical examples.
+3. Record actual outputs.
+4. Complete the lesson exercises and quiz.
+5. Update `LEARNING.md` after completing each lesson.
+
+**Current focus:** Lesson 01 — Linear Algebra Intuition.
