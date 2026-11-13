@@ -2,22 +2,27 @@
 
 ## What I understood
 
-- **Vectors are coordinates for concepts:** I understood that in computer science, a vector is just an ordered list of numbers, but in AI, it represents a data point or "embedding" in multi-dimensional space.
-- **The geometry of basic operations:** Vector addition combines two vectors tip-to-tail, and scalar multiplication stretches or shrinks a vector's length without changing its heading.
-- **The power of the dot product:** Multiplying matching components and summing them reveals how closely aligned two vectors are. When normalized, this gives cosine similarity—the core technique used in vector databases and semantic search.
-- **Neural networks as linear transformations:** A layer in a neural network ($y = Wx + b$) is essentially multiplying an input vector by a weight matrix (taking dot products with each row) and adding a bias vector.
+- **Vectors:** A vector is an ordered list of numbers. The order matters, and the number of values tells us its dimension.
+- **Vector operations:** Vector addition combines matching components. Scalar multiplication multiplies every component by the same number.
+- **Magnitude:** Magnitude measures the length of a vector.
+- **Dot product:** The dot product multiplies matching components and adds the results. For two non-zero vectors, its sign tells us whether the angle is below, equal to, or above 90 degrees.
+- **Matrices:** A matrix is a grid of numbers arranged in rows and columns. Matrix-vector multiplication uses the rows of a matrix to calculate a new vector.
+- **Connection to AI:** Vectors can represent data features and embeddings. Matrices and dot products are used in neural network calculations and embedding comparisons.
 
 ## What I found difficult
 
-- **Visualizing beyond 3 dimensions:** While it's easy to picture 2D or 3D vectors as arrows on paper, thinking about 768- or 1536-dimensional embedding spaces used in real LLMs takes getting used to. Realizing that the mathematical rules (addition, dot product, distance) work exactly the same in high dimensions helped resolve this.
-- **Matrix dimension alignment:** Keeping track of rows and columns during matrix-vector multiplication (e.g., ensuring an $M \times N$ matrix multiplies an $N$-length vector to yield an $M$-length vector) requires careful attention to shape rules.
+- **Thinking about many dimensions:** It is easy to picture a 2D or 3D vector, but difficult to picture a vector with hundreds of components. The calculations still follow the same rules.
+- **Rows and columns:** I need more practice identifying matrix shapes and matching the matrix columns with the vector length during matrix-vector multiplication.
+- **Connecting the formulas to AI:** I understand the basic idea, but I need more examples to see how these operations are used in real machine learning systems.
 
 ## What I need to practise
 
-- Calculating dot products and matrix-vector multiplications by hand on small matrices ($2 \times 2$ and $3 \times 3$) until the arithmetic feels automatic.
-- Implementing vector and matrix operations from scratch in Python without relying on NumPy to cement the underlying logic.
-- Connecting vector dot products directly to how LLM attention scores and RAG cosine similarities are computed.
+- Calculate vector addition, scalar multiplication, magnitude, and dot products by hand.
+- Identify matrix rows, columns, and shapes.
+- Practise matrix-vector multiplication using small examples.
+- Read and run the Python functions in `code/vectors.py` one at a time.
+- Learn how cosine similarity compares embedding directions.
 
 ## Key takeaway
 
-Linear algebra is the foundational language of AI. "Understanding" or "meaning" in modern AI models is represented as a position (vector) in space, and "reasoning" or "processing" is moving and transforming those vectors using matrices.
+Linear algebra gives machine learning a way to represent and work with numerical data. Vectors hold ordered numbers, matrices organize numbers and transform vectors, and operations such as dot products help compare and process them. I should understand the small examples first before moving to more advanced AI applications.
