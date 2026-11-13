@@ -2,159 +2,228 @@
 
 Course lesson: [Linear Algebra Intuition](https://aiengineeringfromscratch.com/lesson?path=phases/01-math-foundations/01-linear-algebra-intuition)
 
-## Learning objectives
+## What you should learn
 
-- Understand what vectors and matrices actually represent in AI (lists of numbers, spatial arrows, and high-dimensional data points).
-- Master basic vector operations from first principles: addition, scalar multiplication, and vector magnitude (length).
-- Understand the **dot product** and why it is the backbone of modern AI (measuring similarity, search/RAG, and self-attention in Transformers).
-- Understand matrix-vector multiplication as a geometric transformation and as the core operation of a neural network layer.
+By the end of this lesson, you should be able to:
+
+- Explain what a vector and a matrix are.
+- Add vectors and multiply a vector by a scalar.
+- Calculate a vector's magnitude (length).
+- Calculate a dot product and explain what its sign tells us.
+- Understand, at a basic level, how a matrix can transform a vector.
+
+You do not need to memorize every formula at once. Work through the small examples first.
 
 ---
 
-## Key concepts
+## 1. What is a vector?
 
-### 1. What is a Vector?
-Depending on who you ask, a vector is:
-- **Computer Science view:** A 1-dimensional array or ordered list of numbers (e.g., `[3, 5, 2]`).
-- **Physics / Math view:** An arrow in space that has a **magnitude** (length) and a **direction**.
-- **AI Engineer view:** An **embedding** or feature representation. Each number in the vector represents an attribute or feature of a concept, word, or image.
+A **vector** is an ordered list of numbers.
 
-```text
-2D Vector: [3, 2]
-    ^ Y-axis
-    |
-  2 + - - - > (3, 2)
-    |       /
-    |     /  Vector arrow
-    |   /
-    +---+---+---+--> X-axis
-    0   1   2   3
+Example:
+
+`[3, 2]`
+
+This vector contains two numbers:
+
+- First component: `3`
+- Second component: `2`
+
+The order matters. `[3, 2]` and `[2, 3]` are different vectors.
+
+In a simple 2D drawing, we can picture a vector as an arrow from the starting point `(0, 0)` to the point `(3, 2)`.
+
+In machine learning, vectors are used to store numerical features. A text or image embedding is also a vector: a list of numbers created by a model to represent information.
+
+**Remember:** A vector is an ordered collection of numbers. In 2D or 3D, we can draw it as an arrow. In AI, it may have hundreds or thousands of components.
+
+## 2. Dimensions and components
+
+A **component** is one number inside a vector.
+
+The **dimension** is the number of components.
+
+| Vector | Number of components | Dimension |
+|---|---:|---:|
+| `[3, 2]` | 2 | 2D |
+| `[1, 4, 7]` | 3 | 3D |
+| `[2, 5, 1, 8]` | 4 | 4D |
+
+A vector with 768 components is a 768-dimensional vector. We cannot easily draw that many dimensions, but we can still perform the same kinds of calculations.
+
+## 3. Scalar multiplication
+
+A **scalar** is one ordinary number, such as `2`, `-3`, or `0.5`.
+
+Scalar multiplication means multiplying every component of a vector by that number.
+
+Example:
+
+`A = [2, 3]`
+
+`3 × A = [3 × 2, 3 × 3] = [6, 9]`
+
+A positive scalar changes the vector's length without reversing its direction. A negative scalar also reverses its direction.
+
+## 4. Vector addition
+
+To add two vectors, add the numbers in matching positions.
+
+Example:
+
+`A = [2, 3]`
+
+`B = [4, 5]`
+
+`A + B = [2 + 4, 3 + 5] = [6, 8]`
+
+The vectors must have the same number of components.
+
+## 5. Magnitude: the length of a vector
+
+The **magnitude** tells us how long a vector is.
+
+For a 2D vector `[x, y]`:
+
+`magnitude = √(x² + y²)`
+
+Example: find the magnitude of `[3, 4]`.
+
+`√(3² + 4²) = √(9 + 16) = √25 = 5`
+
+For a 3D vector, include the third component:
+
+`[2, 3, 6]`
+
+`magnitude = √(2² + 3² + 6²) = √49 = 7`
+
+A **unit vector** is a vector whose magnitude is 1. Normalizing a non-zero vector means changing its length to 1 while keeping its direction.
+
+## 6. The dot product
+
+The **dot product** takes two vectors, multiplies the numbers in matching positions, and adds those products. The answer is one number (a scalar).
+
+Example:
+
+`A = [2, 4]`
+
+`B = [4, 2]`
+
+`A · B = (2 × 4) + (4 × 2) = 8 + 8 = 16`
+
+The vectors must have the same number of components.
+
+For two non-zero vectors, the sign of the dot product tells us about their angle:
+
+- **Positive:** the angle is less than 90°.
+- **Zero:** the vectors are perpendicular (90°).
+- **Negative:** the angle is greater than 90°.
+
+A positive dot product does not automatically mean two vectors are highly similar, because the result also depends on their lengths. Cosine similarity is used when we want to compare direction while accounting for vector length.
+
+## 7. Cosine similarity
+
+**Cosine similarity** compares the direction of two non-zero vectors. It is calculated by dividing their dot product by the product of their magnitudes.
+
+`cosine similarity = (A · B) / (magnitude(A) × magnitude(B))`
+
+Its value is between -1 and +1:
+
+| Value | Meaning |
+|---:|---|
+| +1 | Same direction |
+| 0 | Perpendicular directions |
+| -1 | Opposite directions |
+
+A value closer to +1 means the vectors point in more similar directions. In search systems, this can help compare text or image embeddings.
+
+**Important:** A cosine similarity of zero means the vectors are perpendicular. It does not prove that the real-world ideas are unrelated.
+
+Cosine similarity cannot be calculated for a zero vector because its magnitude is zero and division by zero is not allowed.
+
+## 8. What is a matrix?
+
+A **matrix** is a rectangular arrangement of numbers in rows and columns.
+
+Example:
+
+`A = [[1, 2], [3, 4]]`
+
+It has:
+
+- 2 rows
+- 2 columns
+- Shape: 2 × 2
+
+Read a matrix by finding the row first and then the column. In this example, the number in row 2, column 1 is `3`.
+
+Matrices help store and work with groups of numbers. In machine learning, they are commonly used for datasets and model calculations.
+
+## 9. How a matrix transforms a vector
+
+A matrix can multiply a vector to produce a new vector. This operation is called **matrix-vector multiplication**.
+
+Example:
+
+`W = [[1, 2], [0, 1]]`
+
+`x = [2, 3]`
+
+Multiply each matrix row by the vector:
+
+- First row: `(1 × 2) + (2 × 3) = 8`
+- Second row: `(0 × 2) + (1 × 3) = 3`
+
+The result is:
+
+`W × x = [8, 3]`
+
+The matrix has transformed the input vector `[2, 3]` into `[8, 3]`.
+
+The number of values in the input vector must match the number of columns in the matrix.
+
+A neural network uses this kind of calculation in a layer. A common form is:
+
+`y = W × x + b`
+
+- `x` is the input vector.
+- `W` is the weight matrix.
+- `b` is the bias vector.
+- `y` is the output vector.
+
+For now, remember that the layer takes numerical input, performs matrix-vector multiplication, and adds a bias.
+
+---
+
+## 10. Python practice
+
+The file `code/vectors.py` contains pure Python functions for vector addition, subtraction, scalar multiplication, magnitude, normalization, dot product, cosine similarity, matrix-vector multiplication, and a simple neural-network layer.
+
+Run it from the repository root:
+
+```bash
+python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
 ```
 
-### 2. Dimension
-The number of elements inside a vector:
-- `[3, 2]` has 2 dimensions (lives in 2D space).
-- `[1, 4, 7]` has 3 dimensions (lives in 3D space).
-- In modern AI, word and text embeddings typically have **768**, **1536**, or **4096** dimensions. Even though we cannot picture 1536-dimensional space with our eyes, the math behaves identically to 2D and 3D space!
+The captured result is saved in `outputs/vectors-output.txt`. The verification steps are recorded in `verification/run-check.md`.
 
-### 3. Scalar
-A single ordinary number (e.g., `3`, `-0.5`, `10`).
-When a scalar multiplies a vector, it **scales** (stretches, shrinks, or reverses) its length without changing its line of direction.
+Start by reading one function at a time. For example, `vector_add` adds matching components. You do not need to understand the whole file at once.
 
-### 4. Vector Addition
-Adding two vectors element-by-element:
-$$\mathbf{u} + \mathbf{v} = [u_1 + v_1, u_2 + v_2, \dots, u_n + v_n]$$
-Geometrically, it corresponds to placing the second vector's tail at the tip of the first vector.
+## 11. Quick revision
 
-### 5. Vector Magnitude (Length)
-The length of a vector from the origin $(0, 0)$ to its tip:
-$$\|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}$$
-A vector with a magnitude of 1 is called a **unit vector** (or normalized vector).
+- **Vector:** an ordered list of numbers.
+- **Component:** one number in a vector.
+- **Dimension:** the number of components.
+- **Scalar multiplication:** multiply every component by one number.
+- **Vector addition:** add matching components.
+- **Magnitude:** the length of a vector.
+- **Dot product:** multiply matching components and add the results.
+- **Cosine similarity:** compare the directions of two non-zero vectors.
+- **Matrix:** numbers arranged in rows and columns.
+- **Matrix-vector multiplication:** use a matrix to calculate a new vector.
 
-### 6. The Dot Product ($\mathbf{u} \cdot \mathbf{v}$)
-Multiply corresponding numbers and sum the results:
-$$\mathbf{u} \cdot \mathbf{v} = (u_1 \times v_1) + (u_2 \times v_2) + \dots + (u_n \times v_n)$$
+## 12. Connection to AI
 
-**Why the dot product is so important:**
-- It measures **alignment** and **similarity**.
-- If two vectors point in the exact same direction: dot product is large and positive.
-- If two vectors are perpendicular ($90^\circ$, orthogonal): dot product is **0** (no relationship).
-- If two vectors point in opposite directions: dot product is negative.
+Machine learning models work with numbers. Vectors can represent input features and embeddings. Matrices help models process groups of numbers and transform vectors. Dot products and cosine similarity are useful in operations such as comparing embeddings and calculating attention scores.
 
-### 7. Cosine Similarity
-$$\text{Cosine Similarity}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}$$
-Cosine similarity ignores vector length and only compares the angle between two vectors:
-- `+1.0` = Identical direction (very similar).
-- ` 0.0` = Unrelated / perpendicular.
-- `-1.0` = Exact opposites.
-
-### 8. Matrices and Transformations
-- A **matrix** is a 2D grid of numbers with rows and columns (e.g., $M \times N$).
-- In AI, a matrix acts as a **linear transformation**: it takes an input vector and transforms it (rotates, scales, projects) into a new output vector.
-- In a neural network layer:
-  $$\mathbf{y} = \mathbf{W}\mathbf{x} + \mathbf{b}$$
-  where $\mathbf{x}$ is the input vector, $\mathbf{W}$ is the weight matrix (the model's learned knowledge), $\mathbf{b}$ is the bias vector, and $\mathbf{y}$ is the output vector.
-
----
-
-## Examples and explanations
-
-### Example 1: 2D Vector Addition and Scaling
-Suppose we have two vectors:
-$$\mathbf{a} = [3, 2], \quad \mathbf{b} = [1, 4]$$
-
-- **Addition:**
-  $$\mathbf{a} + \mathbf{b} = [3+1, 2+4] = [4, 6]$$
-- **Scalar multiplication ($c = 2$):**
-  $$2 \times \mathbf{a} = [2 \times 3, 2 \times 2] = [6, 4]$$
-- **Magnitude of $\mathbf{a}$:**
-  $$\|\mathbf{a}\| = \sqrt{3^2 + 2^2} = \sqrt{9 + 4} = \sqrt{13} \approx 3.606$$
-
-### Example 2: Dot Product and Similarity
-Suppose we represent 3 concepts in a simplified 2D feature space:
-`[cuteness, ferocity]`
-- **Puppy:** `[0.9, 0.1]`
-- **Dog:** `[0.8, 0.3]`
-- **Wolf:** `[0.1, 0.9]`
-
-Calculating the dot products:
-- **Puppy $\cdot$ Dog:** $(0.9 \times 0.8) + (0.1 \times 0.3) = 0.72 + 0.03 = 0.75$ (high similarity)
-- **Puppy $\cdot$ Wolf:** $(0.9 \times 0.1) + (0.1 \times 0.9) = 0.09 + 0.09 = 0.18$ (low similarity)
-
-This simple calculation is the exact intuition behind **Vector Search / RAG** and **Semantic Search**!
-
-### Example 3: Matrix-Vector Product (A Neural Network Layer)
-Consider an input vector $\mathbf{x} = [2, 3]$ and a weight matrix $\mathbf{W}$:
-$$\mathbf{W} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \\ 3 & -1 \end{bmatrix}$$
-Multiplying $\mathbf{W}\mathbf{x}$ means taking the dot product of each row of $\mathbf{W}$ with $\mathbf{x}$:
-- Row 1: $(1 \times 2) + (2 \times 3) = 2 + 6 = 8$
-- Row 2: $(0 \times 2) + (1 \times 3) = 0 + 3 = 3$
-- Row 3: $(3 \times 2) + (-1 \times 3) = 6 - 3 = 3$
-
-Output vector: $\mathbf{y} = [8, 3, 3]$.
-A 2-dimensional input was transformed into a 3-dimensional output!
-
----
-
-## Python practice
-
-We implement all these core concepts from scratch in pure Python without needing external libraries:
-
-```python
-import math
-
-def vector_add(u, v):
-    return [a + b for a, b in zip(u, v)]
-
-def scalar_multiply(c, v):
-    return [c * x for x in v]
-
-def vector_magnitude(v):
-    return math.sqrt(sum(x * x for x in v))
-
-def normalize(v):
-    mag = vector_magnitude(v)
-    return [x / mag for x in v] if mag > 0 else v
-
-def dot_product(u, v):
-    return sum(a * b for a, b in zip(u, v))
-
-def cosine_similarity(u, v):
-    mag_u = vector_magnitude(u)
-    mag_v = vector_magnitude(v)
-    if mag_u == 0 or mag_v == 0:
-        return 0.0
-    return dot_product(u, v) / (mag_u * mag_v)
-
-def matrix_vector_multiply(matrix, vector):
-    return [dot_product(row, vector) for row in matrix]
-```
-
----
-
-## What I learned
-
-1. **AI is linear algebra at scale:** At the heart of complex LLMs and neural networks are simply vectors, matrices, and dot products performed billions of times.
-2. **Vectors capture meaning:** In modern AI applications, texts, images, and audio are converted into embedding vectors. Similar concepts cluster close together in vector space.
-3. **The dot product is our similarity detector:** Whether querying a vector database in RAG or computing self-attention in a Transformer, the dot product determines which tokens and documents are related.
-4. **Matrices represent transformations:** Matrix multiplication transforms an input vector from one feature space to another, allowing neural networks to extract high-level patterns from raw data.
+These are building blocks. Real AI systems combine many such operations with additional ideas and algorithms.
