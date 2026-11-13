@@ -15,7 +15,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | Phase | Name | Status | Est. hours |
 |-------|------|--------|------------|
 | 0 | Setup & Tooling | Done | 16 |
-| 1 | Math Foundations | Do | 23 |
+| 1 | Math Foundations | In progress | 23 |
 | 2 | ML Fundamentals | Do | 26 |
 | 3 | Deep Learning Core | Do | 15 |
 | 4 | Computer Vision | Do | 27 |
@@ -51,6 +51,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-10 | 0/11 | 3/3 | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. Passed the quiz on execute permissions, directory disk usage, and macOS/Linux sed differences (C, C, D). |
 | 2026-11-11 | 0/12 | 3/3 | Quiz answers B, C, D: data leakage, data-loading bottlenecks, and NaN debugging. Correctly matched tensor input shape, recognized overfitting, and chose tracemalloc for growing Python allocations. CPU practical checks passed, including training, NaN injection, scripted pdb, line/memory profiling and TensorBoard HTTP 200. GPU checks skipped. Learner reflection saved; hands-on learner debugger use is not claimed. |
 | 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
+| 2026-11-13 | 1/01 | Complete | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
 
 ## Lesson 07 session record
 
@@ -151,7 +152,7 @@ Phase 0 — Setup & Tooling: **complete**. Lessons 01–13 have recorded quiz re
 - Environment: project `.venv`; CPU PyTorch, NumPy, TensorBoard and profilers installed. Pinned setuptools 80.9.0 fixes TensorBoard's pkg_resources dependency. TypeScript uses local tsx and package-lock.json. Final pip check passed.
 - Learner reflection: "I will use tools like tracemalloc and cProfile to catch memory leaks in long chat sessions and pinpoint slow bottlenecks in my retrieval"
 - Source manifests, runbooks, dependency versions, reflection, and actual output reports are saved in the Lesson 12 and 13 folders.
-- Next lesson: **1/01 — Linear Algebra Intuition**. Phase 1 has not started.
+- Next lesson: **1/02 — Vectors, Matrices & Operations**. Lesson 1/01 (Linear Algebra Intuition) completed.
 - Optional phase review: `check-understanding 0`.
 
 

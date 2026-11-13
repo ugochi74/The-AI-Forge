@@ -6,8 +6,8 @@
 
 | No. | Lesson | Status |
 |---|---|---|
-| 01 | [Linear Algebra Intuition](01-linear-algebra-intuition/) | In progress |
-| 02 | [Vectors, Matrices & Operations](02-vectors-matrices-operations/) | Not started |
+| 01 | [Linear Algebra Intuition](01-linear-algebra-intuition/) | Complete |
+| 02 | [Vectors, Matrices & Operations](02-vectors-matrices-operations/) | In progress |
 | 03 | [Matrix Transformations & Eigenvalues](03-matrix-transformations-eigenvalues/) | Not started |
 | 04 | [Calculus for ML: Derivatives & Gradients](04-calculus-for-ml-derivatives-gradients/) | Not started |
 | 05 | [Chain Rule & Automatic Differentiation](05-chain-rule-automatic-differentiation/) | Not started |
@@ -59,6 +59,7 @@ lesson-folder/
 
 ## Current Focus
 
-**Lesson 01 — Linear Algebra Intuition**
+**Lesson 01 — Linear Algebra Intuition (Complete)**
+Completed vector foundations, dot products, cosine similarity, and matrix-vector multiplication as neural network layers with pure Python implementations and verified outputs.
 
-Current topics include vectors, vector components, dimensions, and the dot product.
+**Next:** Lesson 02 — Vectors, Matrices & Operations.

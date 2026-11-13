@@ -1,0 +1,33 @@
+============================================================
+PHASE 1, LESSON 1: LINEAR ALGEBRA INTUITION
+============================================================
+
+--- 1. Basic Vector Operations ---
+Vector u: [3.0, 2.0]
+Vector v: [1.0, 4.0]
+u + v:    [4.0, 6.0]
+u - v:    [2.0, -2.0]
+2 * u:    [6.0, 4.0]
+||u||:    3.6056
+u_norm:   [0.8321, 0.5547]
+
+--- 2. Dot Product & Alignment ---
+Dot product (same direction):     10.00
+Dot product (perpendicular 90°): 0.00 (orthogonal)
+Dot product (opposite direction): -5.00
+
+--- 3. AI Intuition: Embeddings & Cosine Similarity ---
+Query concept: 'dog'
+  Similarity with 'puppy   ': 0.9996
+  Similarity with 'dog     ': 1.0000
+  Similarity with 'wolf    ': 0.8021
+  Similarity with 'airplane': 0.0867
+
+--- 4. AI Intuition: Neural Network Linear Layer (y = Wx + b) ---
+Input features (x):    [25.0, 60.0]
+Weight matrix (W):     [[0.2, 0.5], [-0.1, 0.8], [0.4, -0.3]]
+Bias vector (b):       [1.0, 0.5, -2.0]
+Layer output (y=Wx+b): [36.0, 46.0, -10.0]
+
+[OK] All internal tests and assertions passed successfully!
+============================================================

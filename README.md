@@ -93,8 +93,8 @@ The [Docker session reflection](phases/00-setup-and-tooling/07-docker-for-ai/ref
 
 | No. | Lesson | Status |
 |---|---|---|
-| 01 | Linear Algebra Intuition | In progress |
-| 02 | Vectors, Matrices & Operations | Not started |
+| 01 | [Linear Algebra Intuition](phases/01-math-foundations/01-linear-algebra-intuition/) | Complete |
+| 02 | [Vectors, Matrices & Operations](phases/01-math-foundations/02-vectors-matrices-operations/) | In progress |
 | 03 | Matrix Transformations & Eigenvalues | Not started |
 | 04 | Calculus for ML: Derivatives & Gradients | Not started |
 | 05 | Chain Rule & Automatic Differentiation | Not started |
@@ -134,4 +134,4 @@ Each lesson will contain:
 4. Complete the lesson exercises and quiz.
 5. Update `LEARNING.md` after completing each lesson.
 
-**Current focus:** Lesson 01 — Linear Algebra Intuition.
+**Current focus:** Lesson 02 — Vectors, Matrices & Operations (Lesson 01 Complete).
