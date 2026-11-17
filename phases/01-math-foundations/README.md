@@ -6,8 +6,8 @@
 
 | No. | Lesson | Status |
 |---|---|---|
-| 01 | [Linear Algebra Intuition](01-linear-algebra-intuition/) | Complete |
-| 02 | [Vectors, Matrices & Operations](02-vectors-matrices-operations/) | In progress |
+| 01 | [Linear Algebra Intuition](01-linear-algebra-intuition/) | In progress |
+| 02 | [Vectors, Matrices & Operations](02-vectors-matrices-operations/) | Not started |
 | 03 | [Matrix Transformations & Eigenvalues](03-matrix-transformations-eigenvalues/) | Not started |
 | 04 | [Calculus for ML: Derivatives & Gradients](04-calculus-for-ml-derivatives-gradients/) | Not started |
 | 05 | [Chain Rule & Automatic Differentiation](05-chain-rule-automatic-differentiation/) | Not started |

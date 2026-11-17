@@ -1,8 +1,8 @@
-def add_vectors(u, v):
-    first = u[0] + v[0]
-    second = u[1] + v[1]
+# def add_vectors(u, v):
+#     first = u[0] + v[0]
+#     second = u[1] + v[1]
 
-    return [first, second]
+#     return [first, second]
 
 def add_vectors(u, v):
     if len(u) != len(v):
@@ -15,5 +15,4 @@ def add_vectors(u, v):
 
 u = [2, 3, 4]
 v = [1, 5, 6]
-
 print(add_vectors(u, v))
