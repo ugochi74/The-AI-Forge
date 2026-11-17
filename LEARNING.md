@@ -99,3 +99,23 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Continue practising matrix addition and matrix multiplication in Lesson 1/02.
 - Add or review beginner-friendly Python examples and tests for the matrix operations.
 - Keep quiz scores and practical verification evidence separate; only record checks that were actually run.
+
+## Phase 01 – Math Foundations
+
+### Lesson 01: Linear Algebra Intuition — 17 November 2026
+
+**Progress made today**
+- Implemented vector normalization in Python and verified that `[3, 4]` becomes `[0.6, 0.8]`.
+- Implemented the dot product using a loop and verified that `[3, 2] · [4, 5] = 22`.
+- Implemented cosine similarity using the dot product and vector magnitudes.
+- Learned that a zero dot product indicates perpendicular vectors, while cosine similarity measures the alignment of vector directions.
+- Connected cosine similarity to AI embeddings and comparing numerical representations.
+
+**Python concepts practised**
+- Functions, parameters, return values, lists, loops, conditionals, and raising `ValueError`.
+- Calling one function from another and testing implementations with sample inputs.
+
+**Next topics**
+- Matrix-vector multiplication.
+- Neural network linear layer: `y = Wx + b`.
+
