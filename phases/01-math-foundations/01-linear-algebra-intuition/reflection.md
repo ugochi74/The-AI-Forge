@@ -26,3 +26,20 @@
 ## Key takeaway
 
 Linear algebra gives machine learning a way to represent and work with numerical data. Vectors hold ordered numbers, matrices organize numbers and transform vectors, and operations such as dot products help compare and process them. I should understand the small examples first before moving to more advanced AI applications.
+
+
+## Personal Reflection
+
+- The dot product measures how two vectors relate to each other. It is especially useful in AI when comparing embeddings.
+The formula: u.v = (u1*v1 ) + (u2*v2)
+
+- In AI, words, sentences, images, and other data can be represented as numerical vectors called embeddings.
+
+Cosine similarity helps us measure how similar two embedding directions are.
+
+Its formula is:
+\[
+\text{Similarity}(u,v)=
+\frac{u\cdot v}{\|u\|\times\|v\|}
+\]
+
