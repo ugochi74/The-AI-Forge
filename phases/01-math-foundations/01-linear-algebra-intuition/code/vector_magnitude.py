@@ -18,9 +18,10 @@ def vector_mag(v):
 # v = [6, 8]
 
 # (v[0]**2 + v[1]**2)**0.5
-v = [12, 5]
-print(vector_magnitude(v))
+if __name__ == "__main__":
+ v = [12, 5]
+ print(vector_magnitude(v))
 
-v = [3, 4]
+ v = [3, 4]
 
-print(vector_mag(v))
+ print(vector_mag(v))
