@@ -7,12 +7,12 @@ def matrix_vector_multiply(matrix, vector):
         result.append(total)
     return result
 
-
-matrix = [
+if __name__ == "__main__":
+ matrix = [
     [2, 3],
     [4, 5]
-]
+ ]
 
-vector = [2, 3]
+ vector = [3, 2]
 
-print(matrix_vector_multiply(matrix, vector))
+ print(matrix_vector_multiply(matrix, vector))
