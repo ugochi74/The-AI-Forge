@@ -27,7 +27,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 6 | Speech & Audio | Do | 18 |
 | 7 | Transformers Deep Dive | Do | 14 |
 | 8 | Generative AI | Do | 14 |
-| 9 | Reinforcement Learning | Do | 13 |
+| 9 | Reinforcement Learning | Do | 14 |
 | 10 | LLMs from Scratch | Do | 26 |
 | 11 | LLM Engineering | Do | 19 |
 | 12 | Multimodal AI | Do | 65 |
@@ -58,6 +58,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
 | 2026-11-13 | 1/01 | Complete | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
 | 2026-11-13 | 1/02 | In progress | Started vectors and matrices operations. Practised vector addition, scalar multiplication (including a negative scalar), matrix dimensions, and identifying a matrix element. Currently learning matrix addition; no lesson quiz score recorded yet. |
+| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. Began a reusable Python implementation; execution and validation are still pending. |
 
 ## Lesson 07 session record
 
@@ -119,3 +120,35 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Matrix-vector multiplication.
 - Neural network linear layer: `y = Wx + b`.
 
+### Lesson 01: Linear Algebra Intuition — 18 November 2026
+
+**What I learned today**
+- Reviewed vector magnitude and normalization, including why a normalized vector has a magnitude of 1.
+- Practised cosine similarity calculations and interpreted the key values: 1 for vectors pointing in the same direction, 0 for perpendicular vectors, and -1 for vectors pointing in opposite directions.
+- Calculated a cosine similarity of 0 using the vectors `[3, 4]` and `[-4, 3]`.
+- Learned matrix-vector multiplication using the matrix `[[2, 3], [4, 5]]` and input vectors such as `[2, 3]`, `[3, 2]`, and `[1, 1]`.
+- Understood that each matrix row is multiplied by the same input vector, producing one output value per row.
+- Learned that the output vector contains as many values as the matrix has rows.
+- Started a Python implementation using nested loops, a running total, and a result list. The implementation still needs to be run and tested.
+
+**Example**
+```python
+matrix = [
+    [2, 3],
+    [4, 5]
+]
+
+vector = [2, 3]
+
+# Expected output: [13, 23]
+```
+
+**Python concepts practised**
+- Importing functions from other modules.
+- Using `if __name__ == "__main__":` to keep test code from running during imports.
+- Working with nested lists, nested loops, indexes, and appending results to a list.
+
+**Next steps**
+- Run and verify the matrix-vector multiplication implementation.
+- Add validation for incompatible matrix and vector dimensions.
+- Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
