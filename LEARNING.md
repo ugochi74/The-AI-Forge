@@ -27,7 +27,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 6 | Speech & Audio | Do | 18 |
 | 7 | Transformers Deep Dive | Do | 14 |
 | 8 | Generative AI | Do | 14 |
-| 9 | Reinforcement Learning | Do | 14 |
+| 9 | Reinforcement Learning | Do | 13 |
 | 10 | LLMs from Scratch | Do | 26 |
 | 11 | LLM Engineering | Do | 19 |
 | 12 | Multimodal AI | Do | 65 |
