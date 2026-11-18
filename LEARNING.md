@@ -88,8 +88,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 
 - Phase 0 — Setup & Tooling: **complete**. Lessons 01–13 have recorded quiz results.
 - Phase 1 — Math Foundations: **in progress**.
-- Lesson 1/01 — Linear Algebra Intuition: **complete**.
-- Lesson 1/02 — Vectors, Matrices & Operations: **in progress**.
+-Lesson 01 — Linear Algebra Intuition: **in progress**.
 - Recently practised: vector addition, scalar multiplication, vector magnitude, dot products, matrix dimensions, and reading a matrix element.
 - Current learning point: matrix addition. Continue with small examples before moving to matrix multiplication.
 - Documentation: Lesson 1/01 notes and reflection have been simplified and updated. Continue recording actual code, outputs, and verification as practical work is completed.
