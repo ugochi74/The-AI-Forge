@@ -11,3 +11,7 @@ node_modules/
 
 # Local Python virtual environments
 .venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
