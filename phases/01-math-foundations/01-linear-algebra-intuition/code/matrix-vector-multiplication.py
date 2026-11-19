@@ -1,4 +1,7 @@
 def matrix_vector_multiply(matrix, vector):
+    for row in matrix:
+        if len(row) != len(vector):
+           raise ValueError("Matrix columns must match vector length")
     result  = []
     for row in matrix:
         total = 0
