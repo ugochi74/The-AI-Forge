@@ -58,7 +58,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
 | 2026-11-13 | 1/01 | Complete | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
 | 2026-11-13 | 1/02 | In progress | Started vectors and matrices operations. Practised vector addition, scalar multiplication (including a negative scalar), matrix dimensions, and identifying a matrix element. Currently learning matrix addition; no lesson quiz score recorded yet. |
-| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. Began a reusable Python implementation; execution and validation are still pending. |
+| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. |\n| 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. Lesson remains in progress pending the neural-network linear-layer connection and remaining lesson review. |
 
 ## Lesson 07 session record
 
@@ -150,4 +150,25 @@ vector = [2, 3]
 **Next steps**
 - Run and verify the matrix-vector multiplication implementation.
 - Add validation for incompatible matrix and vector dimensions.
+- Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
+
+
+### Lesson 01: Linear Algebra Intuition — 19 November 2026
+
+**What I learned and implemented today**
+- Completed a Python implementation of matrix-vector multiplication using nested loops.
+- Used a running total to multiply each matrix row by the corresponding input-vector values, then appended one result for each row.
+- Confirmed that the matrix `[[2, 3], [4, 5]]` multiplied by `[2, 3]` produces `[13, 23]`.
+- Learned that the number of matrix columns must match the number of input-vector values.
+- Added dimension validation with `ValueError` when a row length does not match the vector length.
+- Added empty-matrix validation with `if not matrix` and `ValueError`.
+- Tested valid multiplication, incompatible dimensions, and an empty matrix. The valid case returned `[13, 23]`; the two invalid cases raised the expected errors.
+- Reinforced the dimension rule: matrix columns determine the input-vector length, while matrix rows determine the output-vector length.
+
+**Python concepts practised**
+- Nested `for` loops, `range()`, list indexing, accumulating values with `+=`, and `list.append()`.
+- Input validation using `if` and raising `ValueError`.
+- Checking for an empty list with `if not matrix`.
+
+**Next step**
 - Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
