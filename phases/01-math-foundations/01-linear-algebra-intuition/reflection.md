@@ -43,3 +43,41 @@ Its formula is:
 \frac{u\cdot v}{\|u\|\times\|v\|}
 \]
 
+
+
+---
+
+## Reflection — 20 November 2026
+
+### What I learned
+
+- I can combine smaller functions to build a larger neural-network operation.
+- A linear layer calculates `W × x + b`; ReLU is then applied to its output.
+- ReLU changes negative values to zero and leaves positive values unchanged.
+- In a two-layer feed-forward network, the first layer's activated output becomes the second layer's input.
+- I implemented the two-layer forward pass and ran the script. The verified output for the example was `[13, 4]`.
+- Forward propagation and loss are different: forward propagation produces a prediction, while loss measures how far that prediction is from the target.
+
+### What I found challenging
+
+- Understanding how the output of one layer becomes the input of the next layer.
+- Separating the jobs of the network's forward pass and the loss function.
+- Remembering that ReLU is applied after the linear calculation, not before it.
+
+### What I can explain now
+
+A two-layer network takes an input, applies a linear transformation and ReLU, then passes that result through another linear transformation and ReLU. This produces the network's final prediction. A loss function can then compare that prediction with the correct target.
+
+### What I still need to practise
+
+- Implement Mean Squared Error (MSE) in pure Python.
+- Calculate MSE by hand for a few small examples.
+- Understand how a loss value relates to model training.
+- Later, learn how backpropagation uses the loss to help update weights and biases.
+
+### Evidence and limits
+
+- Ran `two_layer_network.py` successfully.
+- Verified output: `[13, 4]`.
+- The network uses fixed weights and biases. It is a forward-pass demonstration, not a trained model.
+- MSE has been introduced conceptually only; no loss function, backpropagation, or parameter update has been implemented yet.
