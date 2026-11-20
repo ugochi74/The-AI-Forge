@@ -58,7 +58,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
 | 2026-11-13 | 1/01 | Complete | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
 | 2026-11-13 | 1/02 | In progress | Started vectors and matrices operations. Practised vector addition, scalar multiplication (including a negative scalar), matrix dimensions, and identifying a matrix element. Currently learning matrix addition; no lesson quiz score recorded yet. |
-| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. |\n| 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. Lesson remains in progress pending the neural-network linear-layer connection and remaining lesson review. |
+| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. |\n| 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. |\n| 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. Loss-function implementation is the next step; no quiz score recorded. |
 
 ## Lesson 07 session record
 
@@ -86,13 +86,14 @@ To become a competent AI Engineer and build a personal AI chatbot.
 
 ## Current session
 
-- Phase 0 — Setup & Tooling: **complete**. Lessons 01–13 have recorded quiz results.
+- Phase 0 — Setup & Tooling: **complete**.
 - Phase 1 — Math Foundations: **in progress**.
--Lesson 01 — Linear Algebra Intuition: **in progress**.
-- Recently practised: vector addition, scalar multiplication, vector magnitude, dot products, matrix dimensions, and reading a matrix element.
-- Current learning point: matrix addition. Continue with small examples before moving to matrix multiplication.
-- Documentation: Lesson 1/01 notes and reflection have been simplified and updated. Continue recording actual code, outputs, and verification as practical work is completed.
-- Do not record a quiz score or mark Lesson 1/02 complete until its assessment has actually been completed.
+- Lesson 01 — Linear Algebra Intuition: **in progress**.
+- Recent implementation: vector operations, normalization, dot product, cosine similarity, matrix-vector multiplication, a neural-network linear layer, ReLU activation, and a two-layer feed-forward network.
+- Latest verified run: `two_layer_network.py` produced `[13, 4]` for the supplied weights, biases, and input.
+- Concept checkpoint: forward propagation passes input through the network to produce predictions; a loss function measures the difference between predictions and target values.
+- Next topic: implement Mean Squared Error (MSE) in pure Python. The loss function has been introduced conceptually but has **not** yet been implemented.
+- No quiz score has been recorded for this session.
 
 ## Review queue
 
@@ -172,3 +173,20 @@ vector = [2, 3]
 
 **Next step**
 - Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
+
+
+### Lesson 01: Linear Algebra Intuition — 20 November 2026
+
+**What I learned and implemented today**
+- Implemented the ReLU activation function: `relu(value)` returns the value when it is positive and returns zero when it is negative.
+- Implemented `relu_vector(vector)` to apply ReLU to every value in a list.
+- Connected the linear layer `y = Wx + b` to ReLU with `linear_layer_with_relu()`.
+- Built `two_layer_network()`, passing the first layer's activated output into the second layer.
+- Ran `two_layer_network.py` successfully and verified the output `[13, 4]`.
+- Learned that this sequence of passing data through network layers is called **forward propagation**.
+- Distinguished forward propagation from loss: forward propagation produces predictions, while a loss function measures prediction error against target values.
+- Introduced Mean Squared Error (MSE), but have not implemented it yet.
+
+**Next step**
+- Implement a small pure Python MSE function and test it with simple prediction and target lists.
+- Continue one concept and one small implementation at a time.
