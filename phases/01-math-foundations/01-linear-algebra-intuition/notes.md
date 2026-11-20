@@ -227,3 +227,87 @@ Start by reading one function at a time. For example, `vector_add` adds matching
 Machine learning models work with numbers. Vectors can represent input features and embeddings. Matrices help models process groups of numbers and transform vectors. Dot products and cosine similarity are useful in operations such as comparing embeddings and calculating attention scores.
 
 These are building blocks. Real AI systems combine many such operations with additional ideas and algorithms.
+
+
+---
+
+## 13. Linear layer with an activation function
+
+A neural network layer can first perform a linear transformation and then apply an activation function.
+
+The linear transformation is:
+
+`y = W × x + b`
+
+- `x` is the input vector.
+- `W` is the weight matrix.
+- `b` is the bias vector.
+- `y` is the linear output.
+
+The **ReLU** activation function is:
+
+`ReLU(z) = max(0, z)`
+
+It keeps positive values and changes negative values to zero. For example:
+
+`ReLU([-3, 2, -4, 9]) = [0, 2, 0, 9]`
+
+Applying ReLU after the linear transformation gives:
+
+`activated_output = ReLU(W × x + b)`
+
+In the code, `relu.py` contains:
+- `relu(value)`: applies ReLU to one number.
+- `relu_vector(vector)`: applies ReLU to each value in a list.
+- `linear_layer_with_relu(W, x, b)`: runs the linear layer and then applies ReLU.
+
+An activation function such as ReLU adds non-linearity. This allows a neural network to learn more than a simple linear relationship.
+
+## 14. A two-layer feed-forward network
+
+A two-layer network sends the input through one layer, then sends that layer's output into the next layer.
+
+The process is:
+
+1. Pass the original input through the first linear layer.
+2. Apply ReLU to the first layer's output.
+3. Use that activated output as the second layer's input.
+4. Apply the second layer and return its output.
+
+The implementation in `two_layer_network.py` uses the reusable `linear_layer_with_relu()` function twice.
+
+For the example values in the script:
+- Input: `[2, 3]`
+- First layer output after ReLU: `[0, 6, 0]`
+- Final output after the second layer and ReLU: `[13, 4]`
+
+The script was run successfully and printed:
+
+```text
+[13, 4]
+```
+
+This is a small forward-pass demonstration with fixed weights and biases. It does not train the network or update its weights.
+
+## 15. Forward propagation and loss
+
+**Forward propagation** is the process of passing input data through the network's layers to calculate a prediction.
+
+A **loss function** measures how far a prediction is from the correct target value. A smaller loss generally means the prediction is closer to the target under that loss measure.
+
+Example of one squared error:
+
+- Prediction: `15`
+- Actual target: `20`
+- Squared error: `(20 - 15)² = 25`
+
+For multiple examples, **Mean Squared Error (MSE)** is the average of all squared prediction errors:
+
+`MSE = sum((actual - prediction)²) / number_of_examples`
+
+Do not confuse these steps:
+- Forward propagation produces the prediction.
+- The loss function measures prediction error.
+- Training uses the error to adjust model parameters. Backpropagation and weight updates have not been implemented in this lesson yet.
+
+**Next practice:** implement MSE in a small Python function and test it with a few predictions and target values.
