@@ -20,30 +20,22 @@
 - Calculate vector addition, scalar multiplication, magnitude, and dot products by hand.
 - Identify matrix rows, columns, and shapes.
 - Practise matrix-vector multiplication using small examples.
-- Read and run the Python functions in `code/vectors.py` one at a time.
+- Read and run the Python functions in the `code/` directory one at a time.
 - Learn how cosine similarity compares embedding directions.
 
 ## Key takeaway
 
 Linear algebra gives machine learning a way to represent and work with numerical data. Vectors hold ordered numbers, matrices organize numbers and transform vectors, and operations such as dot products help compare and process them. I should understand the small examples first before moving to more advanced AI applications.
 
-
 ## Personal Reflection
 
 - The dot product measures how two vectors relate to each other. It is especially useful in AI when comparing embeddings.
-The formula: u.v = (u1*v1 ) + (u2*v2)
-
 - In AI, words, sentences, images, and other data can be represented as numerical vectors called embeddings.
+- Cosine similarity helps measure how similar two embedding directions are.
 
-Cosine similarity helps us measure how similar two embedding directions are.
+The cosine similarity formula is:
 
-Its formula is:
-\[
-\text{Similarity}(u,v)=
-\frac{u\cdot v}{\|u\|\times\|v\|}
-\]
-
-
+`similarity(u, v) = (u · v) / (magnitude(u) × magnitude(v))`
 
 ---
 
@@ -70,8 +62,7 @@ A two-layer network takes an input, applies a linear transformation and ReLU, th
 
 ### What I still need to practise
 
-- Implement Mean Squared Error (MSE) in pure Python.
-- Calculate MSE by hand for a few small examples.
+- Implement Mean Squared Error (MSE) if it is revisited as part of a later neural-network topic.
 - Understand how a loss value relates to model training.
 - Later, learn how backpropagation uses the loss to help update weights and biases.
 
@@ -81,3 +72,59 @@ A two-layer network takes an input, applies a linear transformation and ReLU, th
 - Verified output: `[13, 4]`.
 - The network uses fixed weights and biases. It is a forward-pass demonstration, not a trained model.
 - MSE has been introduced conceptually only; no loss function, backpropagation, or parameter update has been implemented yet.
+
+---
+
+## Reflection — 22 November 2026
+
+### What I learned
+
+- A set of vectors is linearly independent when none of its vectors can be made by combining the others.
+- A set is linearly dependent when at least one vector can be expressed as a combination of the other vectors.
+- A basis must be both linearly independent and able to span the space.
+- Matrix rank is the number of independent rows or columns.
+- Row reduction helps reveal which rows are dependent. Once a matrix is in echelon form, the number of non-zero rows gives its rank.
+
+### Examples I can explain
+
+For these vectors:
+
+- `v1 = [1, 2, 0]`
+- `v2 = [0, 1, 1]`
+- `v3 = [1, 3, 1]`
+
+I found that:
+
+`v1 + v2 = v3`
+
+Therefore, the set is linearly dependent and contains two independent vectors. I answered both the dependence question and the independent-vector count correctly.
+
+For this matrix:
+
+`[[1, 0, 2], [0, 1, 1], [2, 1, 5]]`
+
+the third row is twice the first row plus the second row. Row reduction produces two non-zero rows and one zero row, so its rank is 2.
+
+### What I found challenging
+
+- Understanding that a vector can be dependent even when its individual values are different from the other vectors.
+- Connecting the idea of a combination of vectors to the number of independent directions.
+- Remembering that rank counts independent rows or columns, not simply the total number of rows or columns.
+
+### What I still need to practise
+
+- Implement row reduction in Python and test the rank function with different matrices.
+- Practise identifying pivots and zero rows.
+- Continue with projection and Gram-Schmidt, which are still outstanding parts of the official lesson.
+
+### Evidence and limits
+
+- Correctly identified `[1, 3, 1]` as the sum of `[1, 2, 0]` and `[0, 1, 1]`.
+- Correctly stated that the example set contains two independent vectors.
+- Followed a walkthrough of a possible `matrix_rank.py` implementation.
+- The Python implementation has not yet been confirmed as created or executed, so no successful code test is claimed.
+- No official lesson quiz score is recorded for this session.
+
+### Personal takeaway
+
+I learned that having more vectors does not always mean having more independent information. A vector can be a combination of other vectors. Rank helps us measure how much independent information a matrix contains. I should verify the idea with my own Python implementation before moving on.
