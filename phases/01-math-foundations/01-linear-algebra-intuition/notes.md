@@ -1,6 +1,6 @@
 # Linear Algebra Intuition
 
-Course lesson: [Linear Algebra Intuition](https://aiengineeringfromscratch.com/lesson?path=phases/01-math-foundations/01-linear-algebra-intuition)
+Course lesson: [Linear Algebra Intuition](https://aiengineeringfromscratch.com/learn/math-foundations/linear-algebra-intuition)
 
 ## What you should learn
 
@@ -10,7 +10,9 @@ By the end of this lesson, you should be able to:
 - Add vectors and multiply a vector by a scalar.
 - Calculate a vector's magnitude (length).
 - Calculate a dot product and explain what its sign tells us.
-- Understand, at a basic level, how a matrix can transform a vector.
+- Understand how matrices transform vectors.
+- Determine linear independence, basis, and rank.
+- Explain projection and Gram-Schmidt, and connect these ideas to AI.
 
 You do not need to memorize every formula at once. Work through the small examples first.
 
@@ -191,23 +193,11 @@ A neural network uses this kind of calculation in a layer. A common form is:
 - `b` is the bias vector.
 - `y` is the output vector.
 
-For now, remember that the layer takes numerical input, performs matrix-vector multiplication, and adds a bias.
-
----
-
 ## 10. Python practice
 
-The file `code/vectors.py` contains pure Python functions for vector addition, subtraction, scalar multiplication, magnitude, normalization, dot product, cosine similarity, matrix-vector multiplication, and a simple neural-network layer.
+The `code/` directory contains pure Python implementations for vector operations, cosine similarity, matrix-vector multiplication, and a simple neural-network layer.
 
-Run it from the repository root:
-
-```bash
-python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
-```
-
-The captured result is saved in `outputs/vectors-output.txt`. The verification steps are recorded in `verification/run-check.md`.
-
-Start by reading one function at a time. For example, `vector_add` adds matching components. You do not need to understand the whole file at once.
+Run individual scripts from the repository root. Read one function at a time and test it with small inputs.
 
 ## 11. Quick revision
 
@@ -227,7 +217,6 @@ Start by reading one function at a time. For example, `vector_add` adds matching
 Machine learning models work with numbers. Vectors can represent input features and embeddings. Matrices help models process groups of numbers and transform vectors. Dot products and cosine similarity are useful in operations such as comparing embeddings and calculating attention scores.
 
 These are building blocks. Real AI systems combine many such operations with additional ideas and algorithms.
-
 
 ---
 
@@ -256,11 +245,6 @@ Applying ReLU after the linear transformation gives:
 
 `activated_output = ReLU(W × x + b)`
 
-In the code, `relu.py` contains:
-- `relu(value)`: applies ReLU to one number.
-- `relu_vector(vector)`: applies ReLU to each value in a list.
-- `linear_layer_with_relu(W, x, b)`: runs the linear layer and then applies ReLU.
-
 An activation function such as ReLU adds non-linearity. This allows a neural network to learn more than a simple linear relationship.
 
 ## 14. A two-layer feed-forward network
@@ -281,21 +265,13 @@ For the example values in the script:
 - First layer output after ReLU: `[0, 6, 0]`
 - Final output after the second layer and ReLU: `[13, 4]`
 
-The script was run successfully and printed:
-
-```text
-[13, 4]
-```
-
-This is a small forward-pass demonstration with fixed weights and biases. It does not train the network or update its weights.
+The script was run successfully and printed `[13, 4]`. This is a forward-pass demonstration with fixed weights and biases. It does not train the network or update its weights.
 
 ## 15. Forward propagation and loss
 
 **Forward propagation** is the process of passing input data through the network's layers to calculate a prediction.
 
-A **loss function** measures how far a prediction is from the correct target value. A smaller loss generally means the prediction is closer to the target under that loss measure.
-
-Example of one squared error:
+A **loss function** measures how far a prediction is from the correct target value. For one example:
 
 - Prediction: `15`
 - Actual target: `20`
@@ -305,9 +281,140 @@ For multiple examples, **Mean Squared Error (MSE)** is the average of all square
 
 `MSE = sum((actual - prediction)²) / number_of_examples`
 
-Do not confuse these steps:
+Keep these steps separate:
 - Forward propagation produces the prediction.
 - The loss function measures prediction error.
-- Training uses the error to adjust model parameters. Backpropagation and weight updates have not been implemented in this lesson yet.
+- Training uses the error to adjust model parameters.
 
-**Next practice:** implement MSE in a small Python function and test it with a few predictions and target values.
+MSE was introduced as an additional neural-network concept, but it is not the next unfinished requirement on the official Linear Algebra Intuition lesson page.
+
+---
+
+## 16. Linear independence
+
+A set of vectors is **linearly independent** when no vector in the set can be made by combining the other vectors.
+
+If at least one vector can be written as a combination of the others, the set is **linearly dependent**.
+
+Example:
+
+`v1 = [1, 0, 0]`
+
+`v2 = [0, 1, 0]`
+
+`v3 = [2, 1, 0]`
+
+Notice:
+
+`v3 = 2 × v1 + v2`
+
+Check:
+
+`2 × [1, 0, 0] + [0, 1, 0] = [2, 1, 0]`
+
+Therefore, the three-vector set is linearly dependent. The first two vectors are independent, while the third adds no new independent direction.
+
+### Another example practised
+
+`v1 = [1, 2, 0]`
+
+`v2 = [0, 1, 1]`
+
+`v3 = [1, 3, 1]`
+
+Since:
+
+`v1 + v2 = [1, 3, 1] = v3`
+
+the three vectors are linearly dependent. There are **two independent vectors** in this set.
+
+## 17. Basis
+
+A **basis** is a set of vectors that satisfies two conditions:
+
+1. The vectors are linearly independent.
+2. They span the space, meaning their combinations can represent every vector in that space.
+
+Example:
+
+`[1, 0]` and `[0, 1]` form a basis for the 2D plane. Any 2D vector `[x, y]` can be written as:
+
+`[x, y] = x × [1, 0] + y × [0, 1]`
+
+The vectors are independent and together span the entire 2D plane.
+
+## 18. Matrix rank
+
+The **rank** of a matrix is the number of independent rows or, equivalently, the number of independent columns.
+
+Consider:
+
+`A = [[1, 0, 2], [0, 1, 1], [2, 1, 5]]`
+
+The third row is a combination of the first two:
+
+`R3 = 2 × R1 + R2`
+
+So the three rows are not all independent. There are two independent rows, and the matrix has rank 2.
+
+### Finding rank with row reduction
+
+Row reduction uses three elementary row operations:
+
+- Swap two rows.
+- Multiply a row by a non-zero number.
+- Add a multiple of one row to another row.
+
+For the matrix above:
+
+Start with:
+
+`[[1, 0, 2], [0, 1, 1], [2, 1, 5]]`
+
+First, replace row 3 with row 3 minus twice row 1:
+
+`[[1, 0, 2], [0, 1, 1], [0, 1, 1]]`
+
+Then replace row 3 with row 3 minus row 2:
+
+`[[1, 0, 2], [0, 1, 1], [0, 0, 0]]`
+
+There are two non-zero rows, so the rank is 2.
+
+**Remember:** After row reduction to echelon form, count the non-zero rows to find the rank.
+
+### Python implementation plan
+
+The next practical task is to create `code/matrix_rank.py`. The planned function will:
+
+1. Validate that the matrix is not empty and that all rows have equal length.
+2. Make a copy so the original matrix is not changed.
+3. Find a non-zero pivot in each column.
+4. Swap rows when needed and eliminate values below each pivot.
+5. Count the pivots to return the rank.
+
+A code walkthrough was provided, but the file has **not yet been confirmed as created or run**. Do not treat the implementation as verified until it is tested locally.
+
+## 19. Today's revision — 22 November 2026
+
+What I learned:
+
+- Linear independence means that no vector in a set can be formed from the other vectors.
+- Linear dependence means at least one vector can be expressed as a combination of the others.
+- A basis is a linearly independent set that spans the space.
+- Matrix rank counts independent rows or columns.
+- Row reduction helps reveal dependent rows and calculate rank.
+- In the example matrix, the third row equals twice the first row plus the second row, so the matrix has rank 2.
+- In the vector exercise, `[1, 3, 1]` equals `[1, 2, 0] + [0, 1, 1]`, so the set contains two independent vectors.
+
+**Checkpoint:** Correctly identified the three-vector set as linearly dependent and correctly answered that it contains two independent vectors.
+
+**Not yet verified:** The `matrix_rank.py` implementation has been explained but has not yet been confirmed as saved, executed, or tested.
+
+**Next steps in the official lesson:**
+1. Create and test `matrix_rank.py` using row reduction.
+2. Complete the official linear independence and rank exercises.
+3. Learn vector projection.
+4. Learn Gram-Schmidt and verify orthonormal vectors.
+5. Continue with the lesson's NumPy and PyTorch applications.
+
