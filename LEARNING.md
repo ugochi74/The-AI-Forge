@@ -56,9 +56,12 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-10 | 0/11 | 3/3 | Practised Linux filesystem navigation, permissions, ownership, process management, CPU and memory monitoring, disk usage, APT package information, and networking. Saved system-check and process-network practice reports. Documented workstation limits including unavailable tmux, screen, and nvidia-smi tools. Passed the quiz on execute permissions, directory disk usage, and macOS/Linux sed differences (C, C, D). |
 | 2026-11-11 | 0/12 | 3/3 | Quiz answers B, C, D: data leakage, data-loading bottlenecks, and NaN debugging. Correctly matched tensor input shape, recognized overfitting, and chose tracemalloc for growing Python allocations. CPU practical checks passed, including training, NaN injection, scripted pdb, line/memory profiling and TensorBoard HTTP 200. GPU checks skipped. Learner reflection saved; hands-on learner debugger use is not claimed. |
 | 2026-11-11 | 0/13 | 2/2 | Quiz answers D, A: shared mutable defaults and fitting standardization on training data only. Correctly predicted seeded splits, batch sizes, standardized value, and generator memory behavior. Python/TypeScript demos, 31 supplied tests, and all five Python exercises ran; learner reflection saved: use tracemalloc for long-chat memory growth and cProfile for retrieval bottlenecks. |
-| 2026-11-13 | 1/01 | Complete | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
+| 2026-11-13 | 1/01 | In progress | Built intuitive vector foundations, dot products, and cosine similarity. Implemented pure Python zero-dependency vector operations and neural network linear layer forward pass (y = Wx + b); all test assertions verified. |
 | 2026-11-13 | 1/02 | In progress | Started vectors and matrices operations. Practised vector addition, scalar multiplication (including a negative scalar), matrix dimensions, and identifying a matrix element. Currently learning matrix addition; no lesson quiz score recorded yet. |
-| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. |\n| 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. |\n| 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. Loss-function implementation is the next step; no quiz score recorded. |
+| 2026-11-18 | 1/01 | In progress | Reviewed vector normalization and cosine similarity, including examples with similarity values 1, 0, and -1. Practised matrix-vector multiplication by hand with a 2×2 matrix and different input vectors. |
+| 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. |
+| 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. MSE was introduced as an additional concept, not yet implemented. |
+| 2026-11-22 | 1/01 | In progress | Studied linear independence, linear dependence, basis, matrix rank, and row reduction. Correctly identified `[1, 3, 1]` as the sum of `[1, 2, 0]` and `[0, 1, 1]`, and correctly stated that the set contains two independent vectors. Walked through a Python `matrix_rank()` implementation, but file creation and execution are not yet verified. No formal quiz score recorded. |
 
 ## Lesson 07 session record
 
@@ -73,32 +76,31 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Build attempt: Docker client 28.2.2 is present, but daemon access was denied even with elevated execution; Docker Compose is missing. No image build, container execution, HTTP response, or image-size measurement was verified.
 - Output capture: added `code/capture_outputs.sh` and ran its prerequisite check; actual Docker/Compose errors and exit codes are saved under `outputs/run-20261105T021644Z-6gS5vw/`. Shell syntax passed. The script can capture full exercise results when Docker access and Compose are available.
 - Checkpoint: correctly predicted that an image's copied script still prints `Hello` after a host edit without rebuilding, while a bind-mounted script prints `Welcome` on the next run. Correctly explained that files saved through the `/models` bind mount remain in the host folder after container removal.
-- Checkpoint: understood that a replacement Qdrant container can reuse a named volume. Correctly selected the Flask service name `api` for communication from `ai-dev`. Needed clarification that published host ports do not change container ports; then described these as outside versus internal entrances.
-- Checkpoint: HTTP versus HTTPS needed repeated clarification; eventually selected `http://` for the Flask example without TLS. Revisit this distinction in a later example rather than treating it as mastered.
-- Checkpoint: reviewed Compose status/logs and shutdown; understood `down -v` removes the project's declared named and attached anonymous volumes, with external volumes and bind-mounted host folders excluded.
-- Checkpoint: chose the CUDA runtime base for running prebuilt packages. Initially confused the image tag with base selection; correctly identified `--build-arg CUDA_VARIANT=runtime` as choosing the variant after clarification. Correctly predicted reuse of a cached Flask installation when only a later copied application file changes.
-- Checkpoint: described Compose as a conductor and correctly recalled `http://api:5000` for the Flask service after the port/protocol review.
+- Checkpoint: understood that a replacement Qdrant container can reuse a named volume. Correctly selected the Flask service name `api` for communication from `ai-dev`. Correctly recalled `http://api:5000` for the Flask service after the port/protocol review.
 - Quiz: passed all three post-lesson questions, 3/3 (D, C, B): persistent storage, NVIDIA Container Toolkit, and service-name networking.
 - System limitations: image builds, container network/HTTP checks, persistence, and image-size comparison were not run because Docker daemon access is denied and Docker Compose is missing. GPU execution was not run on the CPU-only host.
-- Available checks rerun: Python/YAML/shell syntax and bind source paths passed; actual results saved in the lesson outputs/local-checks.txt.
-- Reflection: recorded the session's concepts, corrected misconceptions, and practical limits in `phases/00-setup-and-tooling/07-docker-for-ai/reflection.md`.
 - Lesson 0/07 is complete for the learning plan. No successful container execution or image-size measurement is claimed.
 
 ## Current session
 
 - Phase 0 — Setup & Tooling: **complete**.
 - Phase 1 — Math Foundations: **in progress**.
-- Lesson 01 — Linear Algebra Intuition: **in progress**.
-- Recent implementation: vector operations, normalization, dot product, cosine similarity, matrix-vector multiplication, a neural-network linear layer, ReLU activation, and a two-layer feed-forward network.
-- Latest verified run: `two_layer_network.py` produced `[13, 4]` for the supplied weights, biases, and input.
-- Concept checkpoint: forward propagation passes input through the network to produce predictions; a loss function measures the difference between predictions and target values.
-- Next topic: implement Mean Squared Error (MSE) in pure Python. The loss function has been introduced conceptually but has **not** yet been implemented.
-- No quiz score has been recorded for this session.
+- Official lesson — Linear Algebra Intuition: **in progress**.
+- Implemented and practised: vector operations, normalization, dot product, cosine similarity, matrix-vector multiplication, a neural-network linear layer, ReLU activation, and a two-layer feed-forward network.
+- Latest verified neural-network script run: `two_layer_network.py` produced `[13, 4]` for the supplied weights, biases, and input.
+- Latest concept work (2026-11-22): linear independence, dependence, basis, rank, and row reduction.
+- Correctly identified a dependent vector set and counted its two independent vectors.
+- A `matrix_rank.py` walkthrough was provided; implementation and tests are **not yet verified**.
+- MSE was introduced as an additional neural-network concept, but it is not the next requirement on the official Linear Algebra Intuition lesson page.
 
 ## Review queue
 
-- Continue practising matrix addition and matrix multiplication in Lesson 1/02.
-- Add or review beginner-friendly Python examples and tests for the matrix operations.
+- Create and test `code/matrix_rank.py` using row reduction.
+- Practise matrix rank with full-rank, rank-deficient, rectangular, and zero matrices.
+- Complete the official exercises for linear independence and rank.
+- Learn vector projection and implement `project()`.
+- Learn Gram-Schmidt and implement `gram_schmidt()`; verify unit magnitudes and pairwise orthogonality.
+- Continue with the official NumPy and PyTorch applications.
 - Keep quiz scores and practical verification evidence separate; only record checks that were actually run.
 
 ## Phase 01 – Math Foundations
@@ -153,7 +155,6 @@ vector = [2, 3]
 - Add validation for incompatible matrix and vector dimensions.
 - Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
 
-
 ### Lesson 01: Linear Algebra Intuition — 19 November 2026
 
 **What I learned and implemented today**
@@ -174,7 +175,6 @@ vector = [2, 3]
 **Next step**
 - Connect matrix-vector multiplication to a neural network linear layer: `y = Wx + b`.
 
-
 ### Lesson 01: Linear Algebra Intuition — 20 November 2026
 
 **What I learned and implemented today**
@@ -185,8 +185,36 @@ vector = [2, 3]
 - Ran `two_layer_network.py` successfully and verified the output `[13, 4]`.
 - Learned that this sequence of passing data through network layers is called **forward propagation**.
 - Distinguished forward propagation from loss: forward propagation produces predictions, while a loss function measures prediction error against target values.
-- Introduced Mean Squared Error (MSE), but have not implemented it yet.
+- Introduced Mean Squared Error (MSE) as an additional neural-network concept; it has not been implemented.
 
 **Next step**
-- Implement a small pure Python MSE function and test it with simple prediction and target lists.
-- Continue one concept and one small implementation at a time.
+- Resume the remaining requirements of the official Linear Algebra Intuition lesson, rather than treating MSE as the next lesson task.
+
+### Lesson 01: Linear Algebra Intuition — 22 November 2026
+
+**What I learned today**
+- Learned that vectors are linearly independent when none can be formed by combining the others.
+- Learned that vectors are linearly dependent when at least one can be expressed as a combination of the others.
+- Understood that a basis is a linearly independent set that spans the space.
+- Learned that matrix rank counts the independent rows or columns of a matrix.
+- Practised row reduction using row operations to expose dependent rows and count non-zero rows.
+
+**Worked vector example**
+- `v1 = [1, 2, 0]`
+- `v2 = [0, 1, 1]`
+- `v3 = [1, 3, 1]`
+- Since `v1 + v2 = v3`, the set is linearly dependent and contains two independent vectors.
+- Correctly answered both the dependence question and the independent-vector count.
+
+**Worked matrix example**
+- Matrix: `[[1, 0, 2], [0, 1, 1], [2, 1, 5]]`.
+- The third row equals twice the first row plus the second row.
+- Row reduction gives `[[1, 0, 2], [0, 1, 1], [0, 0, 0]]`, so the matrix rank is 2.
+
+**Python work**
+- Reviewed the steps for a `matrix_rank(matrix)` function using pivot selection, row swaps, and elimination below each pivot.
+- The code walkthrough was provided, but creation, execution, and tests of `code/matrix_rank.py` have not yet been verified.
+
+**Next steps**
+- Implement and test matrix rank in Python.
+- Continue the official lesson with projection and Gram-Schmidt.
