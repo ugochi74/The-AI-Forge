@@ -62,6 +62,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. |
 | 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. MSE was introduced as an additional concept, not yet implemented. |
 | 2026-11-22 | 1/01 | In progress | Studied linear independence, linear dependence, basis, matrix rank, and row reduction. Correctly identified `[1, 3, 1]` as the sum of `[1, 2, 0]` and `[0, 1, 1]`, and correctly stated that the set contains two independent vectors. Walked through a Python `matrix_rank()` implementation, but file creation and execution are not yet verified. No formal quiz score recorded. |
+| 2026-11-23 | 1/01 | In progress | Revisited linear independence and dependence from the mathematical basics. Practised scalar multiplication, vector addition, and linear combinations; correctly classified scalar-multiple pairs and sets containing the zero vector as dependent; identified independent 2D vector pairs; and expressed `[2, 3]` as `2[1, 0] + 3[0, 1]` and `[4, 5]` as `4[1, 0] + 5[0, 1]`. The final four-vector exercise is still unanswered. |
 
 ## Lesson 07 session record
 
@@ -88,8 +89,10 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Official lesson — Linear Algebra Intuition: **in progress**.
 - Implemented and practised: vector operations, normalization, dot product, cosine similarity, matrix-vector multiplication, a neural-network linear layer, ReLU activation, and a two-layer feed-forward network.
 - Latest verified neural-network script run: `two_layer_network.py` produced `[13, 4]` for the supplied weights, biases, and input.
-- Latest concept work (2026-11-22): linear independence, dependence, basis, rank, and row reduction.
-- Correctly identified a dependent vector set and counted its two independent vectors.
+- Latest concept work (2026-11-23): restarted linear independence and dependence from the mathematical basics, practising scalar multiplication and linear combinations.
+- Correctly identified dependent vectors formed by scalar multiplication, independent 2D vector pairs, and the zero-vector dependence rule.
+- Correctly expressed `[2, 3]` as `2A + 3B` for `A = [1, 0]`, `B = [0, 1]`, and `[4, 5]` as `4A + 5B` for the same basis vectors.
+- The current four-vector exercise has not yet been answered.
 - A `matrix_rank.py` walkthrough was provided; implementation and tests are **not yet verified**.
 - MSE was introduced as an additional neural-network concept, but it is not the next requirement on the official Linear Algebra Intuition lesson page.
 
@@ -97,6 +100,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 
 - Create and test `code/matrix_rank.py` using row reduction.
 - Practise matrix rank with full-rank, rank-deficient, rectangular, and zero matrices.
+- Continue the linear independence exercise with `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]`; the learner has not answered this yet.
 - Complete the official exercises for linear independence and rank.
 - Learn vector projection and implement `project()`.
 - Learn Gram-Schmidt and implement `gram_schmidt()`; verify unit magnitudes and pairwise orthogonality.
@@ -218,3 +222,32 @@ vector = [2, 3]
 **Next steps**
 - Implement and test matrix rank in Python.
 - Continue the official lesson with projection and Gram-Schmidt.
+
+
+### Lesson 01: Linear Algebra Intuition — 23 November 2026
+
+**What I practised today**
+- Revisited linear independence and linear dependence from the beginning, using simple 2D vectors before returning to more advanced examples.
+- Practised scalar multiplication by multiplying every component of a vector by the same scalar.
+- Practised vector addition by adding corresponding components.
+- Identified two-vector sets as dependent when one vector is a scalar multiple of the other.
+- Identified two-vector sets as independent when no single scalar can turn one non-zero vector into the other.
+- Learned that a set containing the zero vector is linearly dependent.
+- Practised linear combinations, where scalar multiples of vectors are added together.
+- Correctly expressed `[1, 1]` as `[1, 0] + [0, 1]`, `[2, 3]` as `2[1, 0] + 3[0, 1]`, and `[4, 5]` as `4[1, 0] + 5[0, 1]`.
+- Correctly identified sets as linearly dependent when one vector could be formed by combining the others.
+- Correctly identified `[1, 0]` and `[0, 1]` as linearly independent.
+
+**Important clarification**
+- For two non-zero vectors in 2D, checking whether one is a scalar multiple of the other is enough to determine dependence.
+- For three or more vectors, checking scalar multiples pair by pair is not enough; a vector may be formed by combining two or more of the others.
+- Any set containing the zero vector is linearly dependent.
+
+**Still practising**
+- Apply the idea of linear combinations to sets containing four vectors in 2D.
+- Explain why any set of more than two vectors in 2D must be linearly dependent.
+- Continue to basis and rank after the independence/dependence foundations are secure.
+
+**Not completed or verified today**
+- The four-vector exercise using `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]` has been assigned but not answered.
+- No Python implementation or code test was performed during this session.
