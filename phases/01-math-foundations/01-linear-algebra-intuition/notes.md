@@ -418,3 +418,136 @@ What I learned:
 4. Learn Gram-Schmidt and verify orthonormal vectors.
 5. Continue with the lesson's NumPy and PyTorch applications.
 
+
+
+---
+
+## 20. Linear independence and dependence — foundations revisited (23 November 2026)
+
+This section starts with the basic arithmetic behind independence and dependence. Work through the scalar multiplication and addition examples before trying to classify larger sets of vectors.
+
+### 20.1 Scalar multiplication
+
+A **scalar** is an ordinary number used to multiply a vector. Multiply every component by that same number.
+
+Example:
+
+`A = [3, 2]`
+
+`2A = 2[3, 2] = [6, 4]`
+
+The scalar must be applied to every component. For example, multiplying `[2, 4]` by 2 gives `[4, 8]`, not `[4, 6]`.
+
+### 20.2 Recognising dependence between two vectors
+
+Two non-zero vectors are linearly dependent if one is a scalar multiple of the other.
+
+Example:
+
+`A = [3, 5]`
+
+`B = [9, 15]`
+
+Since:
+
+`3A = 3[3, 5] = [9, 15] = B`
+
+the two vectors are linearly dependent.
+
+Another example:
+
+`A = [2, 3]`
+
+`B = [4, 7]`
+
+To turn the first component of A into the first component of B, the scalar would need to be 2. But:
+
+`2[2, 3] = [4, 6]`
+
+which is not `[4, 7]`. No single scalar works for both components, so these two vectors are linearly independent.
+
+**Careful:** When checking a scalar, it must work for every component, not just one.
+
+### 20.3 Vector addition
+
+Add corresponding components:
+
+`A = [1, 0]`
+
+`B = [0, 1]`
+
+`A + B = [1 + 0, 0 + 1] = [1, 1]`
+
+### 20.4 Linear combinations
+
+A **linear combination** is made by multiplying vectors by scalars and adding the results.
+
+For example:
+
+`A = [1, 0]`
+
+`B = [0, 1]`
+
+`2A + 3B = 2[1, 0] + 3[0, 1]`
+
+`= [2, 0] + [0, 3] = [2, 3]`
+
+Therefore, `[2, 3] = 2A + 3B`.
+
+Similarly:
+
+`[4, 5] = 4A + 5B`
+
+This is why the set containing A, B, and either of those resulting vectors is linearly dependent: one vector can be formed by combining the other two.
+
+### 20.5 Linear independence and dependence
+
+- **Linearly independent:** no vector in the set can be formed as a linear combination of the other vectors.
+- **Linearly dependent:** at least one vector in the set can be formed as a linear combination of the other vectors.
+
+Examples practised:
+
+| Vectors | Relationship | Result |
+|---|---|---|
+| `[3, 2]`, `[6, 4]` | Second vector is 2 times the first | Dependent |
+| `[3, 5]`, `[9, 15]` | Second vector is 3 times the first | Dependent |
+| `[2, 3]`, `[4, 7]` | No single scalar works for both components | Independent |
+| `[1, 0]`, `[0, 1]` | Neither is a scalar multiple of the other | Independent |
+
+### 20.6 The zero vector
+
+The **zero vector** in 2D is `[0, 0]`.
+
+Any set containing the zero vector is linearly dependent. The zero vector contributes no new direction.
+
+Example: `[1, 2]` and `[0, 0]` form a dependent set.
+
+### 20.7 Important difference: two vectors versus three or more
+
+For two non-zero vectors, checking whether one is a scalar multiple of the other is enough.
+
+For three or more vectors, one vector may be formed by combining multiple other vectors, even if it is not a scalar multiple of any one vector by itself.
+
+Example:
+
+`A = [1, 0]`
+
+`B = [0, 1]`
+
+`C = [1, 1]`
+
+Since `C = A + B`, the three-vector set is linearly dependent.
+
+**Remember:** Do not check only whether one vector is a multiple of one other vector. Check whether it can be made from a combination of the others.
+
+### 20.8 Practice completed on 23 November
+
+- Correctly multiplied vectors by scalars and checked every component.
+- Correctly classified scalar-multiple vector pairs as dependent.
+- Correctly classified a pair with no common scalar multiple as independent.
+- Correctly identified that a set containing the zero vector is dependent.
+- Correctly expressed `[2, 3]` as `2[1, 0] + 3[0, 1]`.
+- Correctly expressed `[4, 5]` as `4[1, 0] + 5[0, 1]`.
+- Correctly identified sets as dependent when one vector was a linear combination of the others.
+
+**Next exercise to complete:** Determine whether `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]` are linearly independent or dependent, and explain why.
