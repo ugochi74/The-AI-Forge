@@ -551,3 +551,71 @@ Since `C = A + B`, the three-vector set is linearly dependent.
 - Correctly identified sets as dependent when one vector was a linear combination of the others.
 
 **Next exercise to complete:** Determine whether `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]` are linearly independent or dependent, and explain why.
+
+
+---
+
+## Vector projection — 23 November 2026
+
+### What projection means
+
+The **projection** of a vector onto another vector is the component of the first vector that points in the direction of the second. Geometrically, it can be understood as the shadow of one vector on the line defined by the other vector.
+
+For a non-zero target vector `b`, the projection of `a` onto `b` is:
+
+`proj_b(a) = ((a · b) / (b · b)) b`
+
+Here:
+- `a · b` is the dot product of the two vectors.
+- `b · b` is the squared magnitude of the target vector.
+- The resulting scalar tells us how much of `b` is needed to form the projection.
+
+### Worked example
+
+Project:
+
+- `a = [3, 4]`
+- `b = [1, 0]`
+
+Calculate the numerator:
+
+`a · b = (3 × 1) + (4 × 0) = 3`
+
+Calculate the denominator:
+
+`b · b = (1 × 1) + (0 × 0) = 1`
+
+Calculate the scalar:
+
+`3 / 1 = 3`
+
+Multiply the target vector by the scalar:
+
+`3 × [1, 0] = [3, 0]`
+
+Therefore, the projection is **`[3, 0]`**.
+
+The horizontal component is retained because the target vector points horizontally. The remaining part of the original vector, `[0, 4]`, is perpendicular to the target vector.
+
+### Python implementation discussed
+
+A pure-Python implementation was provided in `code/vector_projection.py`. It defines:
+- `dot_product(vector_a, vector_b)` to calculate a dot product using a loop.
+- `vector_projection(vector_a, vector_b)` to calculate the projection.
+- Dimension validation to reject vectors of different lengths.
+- A zero-vector check to prevent division by zero when the target vector is `[0, 0]`.
+
+Expected example output:
+
+`Projection: [3.0, 0.0]`
+
+**Verification status:** The implementation has been explained and supplied, but the learner has not yet confirmed saving or running the file. Treat the output as expected, not as a verified test result.
+
+### Connection to AI
+
+Projection is used in mathematical methods such as linear regression and principal component analysis (PCA). It is also related to learned linear projections used in neural-network architectures.
+
+### Next steps
+1. Save and run `vector_projection.py` locally.
+2. Test projection onto a non-horizontal target vector.
+3. Continue to Gram-Schmidt and implement orthogonalization.
