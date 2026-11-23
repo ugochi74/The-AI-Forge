@@ -62,7 +62,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-19 | 1/01 | In progress | Implemented matrix-vector multiplication in Python using nested loops. Verified valid multiplication returns `[13, 23]`; tested incompatible dimensions and an empty matrix, both raising the expected `ValueError`. Practised matrix dimensions: columns determine input-vector length and rows determine output-vector length. |
 | 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. MSE was introduced as an additional concept, not yet implemented. |
 | 2026-11-22 | 1/01 | In progress | Studied linear independence, linear dependence, basis, matrix rank, and row reduction. Correctly identified `[1, 3, 1]` as the sum of `[1, 2, 0]` and `[0, 1, 1]`, and correctly stated that the set contains two independent vectors. Walked through a Python `matrix_rank()` implementation, but file creation and execution are not yet verified. No formal quiz score recorded. |
-| 2026-11-23 | 1/01 | In progress | Revisited linear independence and dependence from the mathematical basics. Practised scalar multiplication, vector addition, and linear combinations; correctly classified scalar-multiple pairs and sets containing the zero vector as dependent; identified independent 2D vector pairs; and expressed `[2, 3]` as `2[1, 0] + 3[0, 1]` and `[4, 5]` as `4[1, 0] + 5[0, 1]`. The final four-vector exercise is still unanswered. |
+| 2026-11-23 | 1/01 | In progress | Revisited linear independence and dependence from the mathematical basics. Practised scalar multiplication, vector addition, and linear combinations; correctly classified scalar-multiple pairs and sets containing the zero vector as dependent; identified independent 2D vector pairs; and expressed `[2, 3]` as `2[1, 0] + 3[0, 1]` and `[4, 5]` as `4[1, 0] + 5[0, 1]`. The final four-vector exercise was assigned but not answered. |
 
 ## Lesson 07 session record
 
@@ -102,7 +102,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Practise matrix rank with full-rank, rank-deficient, rectangular, and zero matrices.
 - Continue the linear independence exercise with `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]`; the learner has not answered this yet.
 - Complete the official exercises for linear independence and rank.
-- Learn vector projection and implement `project()`.
+- Verify and test the provided `vector_projection.py` implementation locally, including a projection where the target vector is not horizontal.
 - Learn Gram-Schmidt and implement `gram_schmidt()`; verify unit magnitudes and pairwise orthogonality.
 - Continue with the official NumPy and PyTorch applications.
 - Keep quiz scores and practical verification evidence separate; only record checks that were actually run.
@@ -251,3 +251,24 @@ vector = [2, 3]
 **Not completed or verified today**
 - The four-vector exercise using `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]` has been assigned but not answered.
 - No Python implementation or code test was performed during this session.
+
+
+### Lesson 01: Linear Algebra Intuition — Vector Projection — 23 November 2026
+
+**What I learned**
+- Vector projection extracts the component of one vector that lies in the direction of another vector.
+- Understood the geometric idea of projection as the shadow of one vector onto another.
+- Worked through projecting `a = [3, 4]` onto `b = [1, 0]`.
+- Calculated the dot products `a · b = 3` and `b · b = 1`, giving the scalar coefficient `3` and projection `[3, 0]`.
+- Learned that the projected vector is parallel to the target vector and that the remaining component is perpendicular to it.
+
+**Python implementation**
+- Reviewed a pure-Python `vector_projection(vector_a, vector_b)` implementation using a reusable `dot_product()` function.
+- The implementation checks that both vectors have equal dimensions and rejects a zero target vector.
+- The example is expected to return `[3.0, 0.0]`.
+- The code was provided in the lesson, but local file creation and execution have **not yet been confirmed**. No successful Python run is claimed.
+
+**Next steps**
+- Save and run `code/vector_projection.py` locally and verify the output.
+- Test projection onto a non-horizontal vector.
+- Continue to Gram-Schmidt after projection is verified.
