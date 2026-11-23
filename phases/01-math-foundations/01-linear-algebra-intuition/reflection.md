@@ -128,3 +128,42 @@ the third row is twice the first row plus the second row. Row reduction produces
 ### Personal takeaway
 
 I learned that having more vectors does not always mean having more independent information. A vector can be a combination of other vectors. Rank helps us measure how much independent information a matrix contains. I should verify the idea with my own Python implementation before moving on.
+
+
+---
+
+## Reflection — 23 November 2026
+
+### What I practised
+- Restarted linear independence and linear dependence from the mathematical basics.
+- Practised scalar multiplication and remembered to multiply every component by the same scalar.
+- Practised vector addition and linear combinations.
+- Correctly recognised dependent pairs when one vector was a scalar multiple of the other.
+- Correctly recognised an independent pair when no single scalar could produce one vector from the other.
+- Learned that any set containing the zero vector is linearly dependent.
+- Correctly expressed `[2, 3]` as `2A + 3B` and `[4, 5]` as `4A + 5B`, where `A = [1, 0]` and `B = [0, 1]`.
+
+### What became clearer
+- The same scalar must work for every component when checking whether two vectors are scalar multiples.
+- With three or more vectors, dependence can happen through a combination of multiple vectors, not only through a scalar multiple of one vector.
+- Two vectors can be independent while adding another vector that is their combination makes the whole set dependent.
+
+### What I need to keep practising
+- Checking linear combinations carefully, component by component.
+- Distinguishing the test for two vectors from the more general test for three or more vectors.
+- Understanding why any set of more than two vectors in 2D must be linearly dependent.
+- Explaining my reasoning with equations rather than giving only the classification.
+
+### Evidence from this session
+- Correctly identified `[6, 4]` as twice `[3, 2]`.
+- Correctly identified `[9, 15]` as three times `[3, 5]`.
+- Correctly classified `[2, 3]` and `[4, 7]` as independent after checking that no one scalar works for both components.
+- Correctly identified `[1, 0]` and `[0, 1]` as independent.
+- Correctly identified a set containing `[0, 0]` as dependent.
+- Correctly expressed `[2, 3]` as `2[1, 0] + 3[0, 1]` and `[4, 5]` as `4[1, 0] + 5[0, 1]`.
+
+### Still in progress
+The exercise with four vectors `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]` has been assigned but not answered. I have not implemented or tested Python code for this session.
+
+### Personal takeaway
+I am beginning to understand that linear dependence is not only about one vector being a multiple of another. A vector can also be created by combining other vectors. I need to keep practising these mathematical relationships until I can identify and explain them confidently.
