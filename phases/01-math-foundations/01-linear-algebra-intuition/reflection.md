@@ -167,3 +167,36 @@ The exercise with four vectors `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D 
 
 ### Personal takeaway
 I am beginning to understand that linear dependence is not only about one vector being a multiple of another. A vector can also be created by combining other vectors. I need to keep practising these mathematical relationships until I can identify and explain them confidently.
+
+
+---
+
+## Reflection — Vector Projection — 23 November 2026
+
+### What I learned
+- Projection extracts the part of one vector that points in the direction of another vector.
+- The shadow analogy helped me understand the geometric meaning.
+- I worked through projecting `[3, 4]` onto `[1, 0]` and obtained `[3, 0]`.
+- I learned that the part left over after projection is perpendicular to the target direction.
+
+### What became clearer
+- The dot product tells us how strongly the vectors align.
+- Dividing by the target vector's dot product with itself gives the scalar needed to scale that target vector.
+- Projection is a vector result, not just a single number.
+
+### Python work
+- Reviewed a Python implementation using a reusable dot-product function.
+- The proposed function checks vector dimensions and prevents projection onto a zero vector.
+- The expected output for the worked example is `[3.0, 0.0]`.
+
+### Evidence and limits
+- The mathematical example was worked through in the lesson.
+- Python code was supplied, but I have not yet confirmed saving and running `vector_projection.py` locally. Therefore, I am not recording a successful execution or test yet.
+
+### What I should do next
+- Run the projection implementation and check its output.
+- Test a projection onto a vector that is not aligned with the horizontal axis.
+- Continue to Gram-Schmidt after verifying the projection code.
+
+### Personal takeaway
+Projection makes the idea of vector direction more concrete: it lets me isolate how much of one vector lies along another direction. I should connect the formula to the geometric picture and verify the implementation with more than one example.
