@@ -619,3 +619,126 @@ Projection is used in mathematical methods such as linear regression and princip
 1. Save and run `vector_projection.py` locally.
 2. Test projection onto a non-horizontal target vector.
 3. Continue to Gram-Schmidt and implement orthogonalization.
+
+
+---
+
+## Gram-Schmidt orthogonalization — 24 November 2026
+
+### Purpose
+
+The **Gram-Schmidt process** converts a linearly independent set of vectors into an orthogonal set that spans the same space. Normalizing the resulting vectors produces an **orthonormal set**.
+
+### Key definitions
+
+- **Orthogonal vectors:** Their dot product is zero; they are perpendicular.
+- **Orthonormal vectors:** They are orthogonal and each has magnitude 1.
+- **Projection:** The component of a vector that lies in the direction of another vector.
+
+### Two-vector process
+
+Given linearly independent vectors \(A\) and \(B\):
+
+1. Keep the first vector: \(u_1=A\).
+2. Project \(B\) onto \(u_1\).
+3. Subtract that projection: \(u_2=B-\operatorname{proj}_{u_1}(B)\).
+4. Check that \(u_1\cdot u_2=0\).
+5. To obtain unit vectors, normalize each orthogonal vector: \(q_i=u_i/\|u_i\|\).
+
+The projection formula is:
+
+\[
+\operatorname{proj}_{u_1}(B)=\frac{B\cdot u_1}{u_1\cdot u_1}u_1
+\]
+
+### Worked example 1
+
+Start with:
+
+- \(A=[1,0]\)
+- \(B=[1,1]\)
+
+Keep the first vector:
+
+- \(u_1=[1,0]\)
+
+Calculate the projection:
+
+- \(B\cdot u_1=(1\times1)+(1\times0)=1\)
+- \(u_1\cdot u_1=(1\times1)+(0\times0)=1\)
+- \(\operatorname{proj}_{u_1}(B)=[1,0]\)
+
+Subtract the projection:
+
+- \(u_2=[1,1]-[1,0]=[0,1]\)
+
+Verify:
+
+- \(u_1\cdot u_2=(1\times0)+(0\times1)=0\)
+
+The vectors \([1,0]\) and \([0,1]\) are orthogonal.
+
+### Worked example 2: Orthogonalization and normalization
+
+Start with:
+
+- \(A=[2,0]\)
+- \(B=[1,2]\)
+
+Keep the first vector:
+
+- \(u_1=[2,0]\)
+
+Calculate the projection:
+
+- \(B\cdot u_1=(1\times2)+(2\times0)=2\)
+- \(u_1\cdot u_1=(2\times2)+(0\times0)=4\)
+- \(\operatorname{proj}_{u_1}(B)=\frac{2}{4}[2,0]=[1,0]\)
+
+Subtract the projection:
+
+- \(u_2=[1,2]-[1,0]=[0,2]\)
+
+Verify orthogonality:
+
+- \(u_1\cdot u_2=(2\times0)+(0\times2)=0\)
+
+Normalize both vectors:
+
+- \(\|u_1\|=\sqrt{2^2+0^2}=2\), so \(q_1=[2,0]/2=[1,0]\).
+- \(\|u_2\|=\sqrt{0^2+2^2}=2\), so \(q_2=[0,2]/2=[0,1]\).
+
+The final vectors \([1,0]\) and \([0,1]\) are orthonormal: their dot product is zero and each has magnitude 1.
+
+### General idea for more than two vectors
+
+For each new vector, subtract its projections onto **all** previously constructed orthogonal vectors. For example, with a third input vector \(C\):
+
+\[
+u_3=C-\operatorname{proj}_{u_1}(C)-\operatorname{proj}_{u_2}(C)
+\]
+
+Here, \(u_1\) and \(u_2\) are the orthogonal vectors already constructed.
+
+### Important takeaways
+
+- A zero dot product confirms orthogonality.
+- Subtracting a projection removes the component in an earlier vector's direction.
+- Normalization changes a vector's length to 1 without changing its direction.
+- Gram-Schmidt preserves the span of the original linearly independent vectors.
+- For three or more vectors, subtract projections onto every previously constructed orthogonal vector.
+
+### Practice and implementation status
+
+- Correctly identified that orthogonal vectors have a dot product of zero.
+- Worked through two two-vector Gram-Schmidt examples.
+- Correctly explained why the projection is subtracted.
+- A magnitude question for \([0,3]\) remains unanswered.
+- The Python implementation has not yet been created or tested. Do not record Gram-Schmidt code as implemented until it is run and verified.
+
+### Next steps
+
+1. Complete the magnitude and normalization practice.
+2. Practise the three-vector formula.
+3. Implement and test \`gram_schmidt()\` in Python.
+4. Verify pairwise dot products are zero and normalized vector magnitudes are 1.
