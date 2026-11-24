@@ -63,6 +63,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 | 2026-11-20 | 1/01 | In progress | Implemented ReLU and vector ReLU, combined a linear layer with ReLU, and built a two-layer feed-forward network using reusable functions. Ran `two_layer_network.py` and verified output `[13, 4]`. Learned that forward propagation produces predictions and a loss function measures prediction error. MSE was introduced as an additional concept, not yet implemented. |
 | 2026-11-22 | 1/01 | In progress | Studied linear independence, linear dependence, basis, matrix rank, and row reduction. Correctly identified `[1, 3, 1]` as the sum of `[1, 2, 0]` and `[0, 1, 1]`, and correctly stated that the set contains two independent vectors. Walked through a Python `matrix_rank()` implementation, but file creation and execution are not yet verified. No formal quiz score recorded. |
 | 2026-11-23 | 1/01 | In progress | Revisited linear independence and dependence from the mathematical basics. Practised scalar multiplication, vector addition, and linear combinations; correctly classified scalar-multiple pairs and sets containing the zero vector as dependent; identified independent 2D vector pairs; and expressed `[2, 3]` as `2[1, 0] + 3[0, 1]` and `[4, 5]` as `4[1, 0] + 5[0, 1]`. The final four-vector exercise was assigned but not answered. |
+| 2026-11-24 | 1/01 | In progress | Studied Gram-Schmidt orthogonalization by hand. Reviewed orthogonality (zero dot product), subtracting projections to remove components along earlier vectors, and normalization to produce unit-length vectors. Worked through two examples and correctly explained why projections are subtracted. The final magnitude check and Python implementation remain pending. |
 
 ## Lesson 07 session record
 
@@ -103,7 +104,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Continue the linear independence exercise with `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]`; the learner has not answered this yet.
 - Complete the official exercises for linear independence and rank.
 - Verify and test the provided `vector_projection.py` implementation locally, including a projection where the target vector is not horizontal.
-- Learn Gram-Schmidt and implement `gram_schmidt()`; verify unit magnitudes and pairwise orthogonality.
+- Complete the remaining Gram-Schmidt magnitude/normalization practice, then implement `gram_schmidt()` in Python and verify unit magnitudes and pairwise orthogonality.
 - Continue with the official NumPy and PyTorch applications.
 - Keep quiz scores and practical verification evidence separate; only record checks that were actually run.
 
@@ -272,3 +273,45 @@ vector = [2, 3]
 - Save and run `code/vector_projection.py` locally and verify the output.
 - Test projection onto a non-horizontal vector.
 - Continue to Gram-Schmidt after projection is verified.
+
+
+### Lesson 01: Linear Algebra Intuition — Gram-Schmidt Orthogonalization — 24 November 2026
+
+**What I learned**
+- Gram-Schmidt transforms a linearly independent set of vectors into an orthogonal set.
+- Orthogonal vectors have a dot product of zero.
+- To construct each new orthogonal vector, subtract its projection onto the previously constructed orthogonal vectors.
+- Normalize the orthogonal vectors to obtain an orthonormal set, where every vector has magnitude 1.
+- For more than two input vectors, subtract the projections onto all previously constructed orthogonal vectors.
+
+**Worked example 1**
+- Started with \`A = [1, 0]\` and \`B = [1, 1]\`.
+- Kept \`u1 = [1, 0]\`.
+- Calculated the projection of \`B\` onto \`u1\` as \`[1, 0]\`.
+- Subtracted the projection: \`u2 = [1, 1] - [1, 0] = [0, 1]\`.
+- Verified orthogonality: \`[1, 0] · [0, 1] = 0\`.
+
+**Worked example 2**
+- Started with \`A = [2, 0]\` and \`B = [1, 2]\`.
+- Kept \`u1 = [2, 0]\`.
+- Calculated the projection of \`B\` onto \`u1\` as \`[1, 0]\`.
+- Subtracted the projection: \`u2 = [1, 2] - [1, 0] = [0, 2]\`.
+- Verified orthogonality: \`[2, 0] · [0, 2] = 0\`.
+- Normalized the vectors: \`q1 = [1, 0]\` and \`q2 = [0, 1]\`.
+- Both normalized vectors have magnitude 1, so the result is orthonormal.
+
+**Understanding check**
+- Correctly identified that the dot product of orthogonal vectors is zero.
+- Initially gave the original vector instead of subtracting the projection in a practice question; corrected the calculation to \`[0, 4]\` after reviewing component-wise subtraction.
+- Correctly explained that the projection is subtracted to remove the component pointing in the direction of the previous vector.
+- A final magnitude question using \`[0, 3]\` was assigned but has not yet been answered.
+
+**Implementation status**
+- The Gram-Schmidt mathematics was worked through by hand.
+- No \`gram_schmidt()\` Python implementation has been created, run, or tested in this session.
+
+**Next steps**
+1. Complete the magnitude and normalization check.
+2. Work through the general Gram-Schmidt formula for three or more vectors.
+3. Implement \`gram_schmidt()\` in Python.
+4. Test that the output vectors are pairwise orthogonal and, after normalization, have magnitude 1.
