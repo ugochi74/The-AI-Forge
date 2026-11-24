@@ -200,3 +200,47 @@ I am beginning to understand that linear dependence is not only about one vector
 
 ### Personal takeaway
 Projection makes the idea of vector direction more concrete: it lets me isolate how much of one vector lies along another direction. I should connect the formula to the geometric picture and verify the implementation with more than one example.
+
+
+---
+
+## Reflection — Gram-Schmidt Orthogonalization — 24 November 2026
+
+### What I learned
+- Gram-Schmidt converts linearly independent vectors into orthogonal vectors.
+- Orthogonal vectors have a dot product of zero.
+- Subtracting a projection removes the component in the direction of a previously constructed vector.
+- Normalization converts orthogonal vectors into orthonormal vectors with magnitude 1.
+
+### Examples I worked through
+- Converted \`[1, 0]\` and \`[1, 1]\` into the orthogonal vectors \`[1, 0]\` and \`[0, 1]\`.
+- Converted \`[2, 0]\` and \`[1, 2]\` into the orthogonal vectors \`[2, 0]\` and \`[0, 2]\`.
+- Normalized the second example to obtain \`[1, 0]\` and \`[0, 1]\`.
+- Verified orthogonality by calculating a dot product of zero.
+
+### What became clearer
+- The projection is subtracted from the original vector; it is not the final orthogonal vector by itself.
+- The remaining vector is perpendicular to the earlier vector.
+- Orthogonalization and normalization are related but different steps.
+- With three or more vectors, each new vector must have the projections onto all previously constructed orthogonal vectors removed.
+
+### What I found challenging
+- Remembering to subtract corresponding vector components after calculating a projection.
+- Distinguishing the original vector, its projection, and the remaining orthogonal component.
+- I initially selected the original vector as the result in one subtraction exercise, then corrected it to \`[0, 4]\` after reviewing the calculation.
+
+### Evidence and limits
+- Correctly answered that orthogonal vectors have a dot product of zero.
+- Correctly explained that Gram-Schmidt subtracts a projection to remove the component along a previous vector.
+- Worked through two mathematical examples by hand.
+- A final magnitude question using \`[0, 3]\` remains unanswered.
+- No Python implementation or execution of Gram-Schmidt has been completed or verified.
+
+### Next steps
+- Complete the magnitude and normalization practice.
+- Work through a three-vector Gram-Schmidt example.
+- Implement \`gram_schmidt()\` in Python.
+- Test pairwise orthogonality and unit magnitudes.
+
+### Personal takeaway
+I learned that Gram-Schmidt uses vector projection to remove unwanted directional components. The remaining vectors are perpendicular, and normalization gives them unit length. Understanding projection made the Gram-Schmidt steps easier to follow.
