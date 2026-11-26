@@ -43,6 +43,7 @@ To become a competent AI Engineer and build a personal AI chatbot.
 
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
+| 2026-11-26 | 1/01 | In progress | Continued Gram-Schmidt: practised vector magnitude and normalization. Calculated the magnitude of `[0, 3]` as 3 after correction, identified `[0, 1]` as a unit vector, and correctly normalized `[0, 5]` to `[0, 1]`. Introduced the three-vector Gram-Schmidt rule: subtract projections onto all previously constructed orthogonal vectors. Three-vector worked example and Python implementation remain pending. |
 | 2026-10-31 | 0/01 | 3/3 | Passed the Dev Environment quiz; ran and recorded all four language examples; set up `course-repo/.venv` with NumPy, Matplotlib, Jupyter, and CPU PyTorch; verified Node/pnpm, Rust/Cargo, Julia, and the Python packages; beginner preflight passed 2/2. |
 | 2026-11-01 | 0/02 | 3/3 | Practiced staging and committing selected files, branches, `.gitignore`, and history inspection. Forked the course repository and pushed `my-progress` (`da22ef4`) to the personal fork. |
 | 2026-11-01 | 0/03 | 3/3 | Verified the local environment is CPU-only, configured Colab with a Tesla T4, confirmed PyTorch CUDA access, measured 2.797s CPU vs 0.088s GPU (~32x), and estimated about 8B fp16 weights from T4 memory. |
@@ -104,7 +105,8 @@ To become a competent AI Engineer and build a personal AI chatbot.
 - Continue the linear independence exercise with `A = [1, 0]`, `B = [0, 1]`, `C = [2, 3]`, and `D = [1, 1]`; the learner has not answered this yet.
 - Complete the official exercises for linear independence and rank.
 - Verify and test the provided `vector_projection.py` implementation locally, including a projection where the target vector is not horizontal.
-- Complete the remaining Gram-Schmidt magnitude/normalization practice, then implement `gram_schmidt()` in Python and verify unit magnitudes and pairwise orthogonality.
+- Practise Gram-Schmidt with three vectors by calculating and subtracting projections onto all previously constructed orthogonal vectors.
+- Implement `gram_schmidt()` in Python and verify unit magnitudes and pairwise orthogonality.
 - Continue with the official NumPy and PyTorch applications.
 - Keep quiz scores and practical verification evidence separate; only record checks that were actually run.
 
@@ -315,3 +317,18 @@ vector = [2, 3]
 2. Work through the general Gram-Schmidt formula for three or more vectors.
 3. Implement \`gram_schmidt()\` in Python.
 4. Test that the output vectors are pairwise orthogonal and, after normalization, have magnitude 1.
+
+
+### Lesson 01: Linear Algebra Intuition — 26 November 2026
+
+**What I practised today**
+- Reviewed vector magnitude using `||v|| = sqrt(x² + y²)`.
+- Learned that normalization divides every component of a non-zero vector by its magnitude.
+- Worked through `[0, 3]`, whose magnitude is 3, and `[0, 5]`, which normalizes to `[0, 1]`.
+- Confirmed that `[0, 1]` is a unit vector because its magnitude is 1.
+- Introduced the three-vector Gram-Schmidt step: subtract projections onto both previously constructed orthogonal vectors.
+
+**Next step**
+- Work through a complete three-vector example before implementing `gram_schmidt()` in Python.
+
+**Verification status:** These were mathematical exercises and explanations. No new Python code was created or run.
