@@ -244,3 +244,29 @@ Projection makes the idea of vector direction more concrete: it lets me isolate 
 
 ### Personal takeaway
 I learned that Gram-Schmidt uses vector projection to remove unwanted directional components. The remaining vectors are perpendicular, and normalization gives them unit length. Understanding projection made the Gram-Schmidt steps easier to follow.
+
+
+---
+
+## Reflection — Gram-Schmidt continuation — 26 November 2026
+
+### What I learned
+- Magnitude measures vector length; for `[0, 3]`, the magnitude is 3.
+- Normalization divides each component by the vector's magnitude.
+- Normalizing `[0, 5]` gives `[0, 1]`, a unit vector with magnitude 1.
+- Normalization changes length without changing direction.
+- In the three-vector Gram-Schmidt process, the third vector must have its projections onto both earlier orthogonal vectors subtracted.
+
+### What I practised
+- Worked through magnitude and normalization multiple-choice questions and corrected misunderstandings using the formulas.
+- Correctly identified `[0, 1]` as the normalized form of `[0, 5]`.
+
+### What I need to practise next
+- Complete a numerical Gram-Schmidt example with three input vectors.
+- Check that all resulting vectors are pairwise orthogonal.
+- Implement and test `gram_schmidt()` in Python.
+
+### Evidence and limits
+- The magnitude and normalization work was completed mathematically.
+- The three-vector formula was introduced, but a full worked example has not yet been completed.
+- No Python implementation or execution is claimed.
