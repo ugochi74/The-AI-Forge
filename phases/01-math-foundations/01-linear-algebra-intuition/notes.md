@@ -742,3 +742,51 @@ Here, \(u_1\) and \(u_2\) are the orthogonal vectors already constructed.
 2. Practise the three-vector formula.
 3. Implement and test \`gram_schmidt()\` in Python.
 4. Verify pairwise dot products are zero and normalized vector magnitudes are 1.
+
+
+---
+
+## Gram-Schmidt: magnitude, normalization, and three vectors — 26 November 2026
+
+### Magnitude
+
+The magnitude (length) of a 2D vector is:
+
+`||v|| = sqrt(x² + y²)`
+
+Example:
+
+`||[0, 3]|| = sqrt(0² + 3²) = sqrt(9) = 3`
+
+### Normalization
+
+Normalization divides every component of a non-zero vector by its magnitude:
+
+`unit_vector = vector / ||vector||`
+
+Example:
+
+`[0, 5] / 5 = [0, 1]`
+
+The result has magnitude 1 and is therefore a **unit vector**. Normalization changes the length but preserves the vector's direction.
+
+### Gram-Schmidt with three vectors
+
+For input vectors `A`, `B`, and `C`, first construct:
+
+- `u1 = A`
+- `u2 = B - proj_u1(B)`
+- `u3 = C - proj_u1(C) - proj_u2(C)`
+
+The third vector has its components along **both** earlier orthogonal vectors removed. The projection formula is:
+
+`proj_u(v) = ((v · u) / (u · u)) u`
+
+**Progress:** The three-vector rule has been introduced, but a complete numerical example and Python implementation are still pending.
+
+### Practice evidence
+
+- Calculated the magnitude of `[0, 3]` as 3 after correcting the initial answer.
+- Identified `[0, 1]` as a unit vector after reviewing its magnitude.
+- Correctly selected `[0, 1]` as the normalized form of `[0, 5]`.
+- No Python code was created or run in this session.
